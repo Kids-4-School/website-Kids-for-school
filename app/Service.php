@@ -29,6 +29,10 @@ class Service extends Model
         return $this->belongsTo('App\User');
     }
 
-
+    //Relation between Services and Lessons ( One-to-Many )
+    public function lessons()
+    {
+        return $this->hasMany('App\Lesson');
+    }
 
 }

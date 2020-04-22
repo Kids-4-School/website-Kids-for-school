@@ -45,15 +45,16 @@ Route::get('/service/edit/{id}','ServicesController@edit')->name('edit.service')
 Route::post('/service/update/{id}','ServicesController@update')->name('update.service');
 Route::get('/service/delete/{id}','ServicesController@destroy')->name('delete.service');
 
-//Route for Courses 
-Route::get('/courses' , 'CoursesController@index')->name('courses');
-Route::get('/courses/all' , 'CoursesController@manageCourses')->name('courses.all')->middleware(['auth','auth.admin']);
-Route::get('/course/create','CoursesController@create')->name('create.course');
-Route::post('/course/new','CoursesController@store')->name('course.new');
-Route::get('/course/show/{id}','CoursesController@show')->name('show.course');
-Route::get('/course/edit/{id}','CoursesController@edit')->name('edit.course');
-Route::post('/course/update/{id}','CoursesController@update')->name('update.course');
-// Route::get('/video/delete/{id}','CoursesController@destroy')->name('delete.video');
 
+//Route for Lessons 
+Route::get('/lessons' , 'LessonsController@index')->name('lessons');
+Route::get('/lessons/all' , 'LessonsController@manageLessons')->name('lessons.all')->middleware(['auth','auth.admin']);
+Route::get('/lesson/create','LessonsController@create')->name('create.lesson');
+Route::post('/lesson/new','LessonsController@store')->name('lesson.new');
+Route::get('/lesson/show/{id}','LessonsController@show')->name('show.lesson');
+Route::get('/lesson/edit/{id}','LessonsController@edit')->name('edit.lesson');
+Route::post('/lesson/update/{id}','LessonsController@update')->name('update.lesson');
+// Route::get('/video/delete/{id}','LessonsController@destroy')->name('delete.video');
+Route::get('/lesson/search','LessonsController@search')->name('search.lesson');
 
 

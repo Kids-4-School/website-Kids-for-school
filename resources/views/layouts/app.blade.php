@@ -70,23 +70,22 @@
                         @endauth
                         <!--Services/-->
 
-
-                        <!--Courses-->
+                        <!--Lessons-->
                             @auth
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                   Courses
+                                    Lessons
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @hasrole('admin')
-                                    <a class="dropdown-item" href="{{route('courses.all')}}">Manage Courses</a>
+                                    <a class="dropdown-item" href="{{route('lessons.all')}}">Manage Lessons</a>
                                 @endhasrole
-                                <a class="dropdown-item" href="{{route('create.course')}}">Create</a>
-                                <a class="dropdown-item" href="{{route('courses')}}">My Courses</a>
+                                <a class="dropdown-item" href="{{route('create.lesson')}}">Create</a>
+                                <a class="dropdown-item" href="{{route('lessons')}}">My Lessons</a>
                                 </div>
                             </li>
                             @endauth
-                        <!--Courses/-->
+                        <!--Lessons/-->
 
                     </ul>
 

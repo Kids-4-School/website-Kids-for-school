@@ -12,12 +12,49 @@
                   
                     <div class="col">
                         <div class="card shadow" style="width:16rem;">
-                                <div class="card-header main_card">Total Users 
+                                <div class="card-header main_card">
+                                    <span class="text_color">Total Users</span> 
                                     <span class="ml-5"><i class="fas fa-users"></i></span>
                                 </div>
                                 <div class="card-header main_card">200
                                     @hasrole('admin') 
-                                        <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right"></i></span>
+                                        <a href="{{route('admin.users.index')}}">
+                                            <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
+                                        </a>
+                                    @endhasrole
+
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow" style="width:16rem;">
+                                <div class="card-header main_card">
+                                    <span class="text_color">Total Services</span> 
+                                    <span class="ml-5"><i class="fas fa-school"></i></span>
+                                </div>
+                                <div class="card-header main_card">200
+                                    @hasrole('admin') 
+                                        <a href="{{route('admin.users.index')}}">
+                                            <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
+                                        </a>
+                                    @endhasrole
+
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow" style="width:16rem;">
+                                <div class="card-header main_card">
+                                    <span class="text_color">Total Courses</span> 
+                                    <span class="ml-5"><i class="fab fa-buffer"></i></span>
+                                </div>
+                                <div class="card-header main_card">200
+                                    @hasrole('admin') 
+                                        <a href="{{route('admin.users.index')}}">
+                                            <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
+                                        </a>
                                     @endhasrole
 
                                 </div>
@@ -25,27 +62,7 @@
                     </div>
                   
 
-                  <div class="col">
-                    <div class="card shadow" style="width:16rem;">
-                            <div class="card-header main_card">Total Users 
-                                <span class="ml-5"><i class="fa fa-edit"></i></span>
-                            </div>
-                            <div class="card-header main_card">200
-                                <span class="ml-5 align-top"><i class="fa fa-edit"></i></span>
-                            </div>
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="card shadow" style="width:16rem;">
-                            <div class="card-header main_card">Total Users 
-                                <span class="ml-5"><i class="fa fa-edit"></i></span>
-                            </div>
-                            <div class="card-header main_card">200
-                                <span class="ml-5 align-top"><i class="fa fa-edit"></i></span>
-                            </div>
-                    </div>
-                  </div>
+                  
 
                 </div>
               </div>

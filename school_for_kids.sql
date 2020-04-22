@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 19, 2020 at 12:18 AM
+-- Generation Time: Apr 22, 2020 at 11:44 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -25,37 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `courses`
---
-
-CREATE TABLE `courses` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `video_link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `description` text COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `slide_image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `user_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`id`, `title`, `subtitle`, `video_link`, `description`, `image`, `slide_image`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 'Data Science', 'Data Science Tutorial by Muhammed Essa', 'https://www.youtube.com/watch?v=23DF2V1z9UE&list=PLMYF6NkLrdN9oTARJ9BE1EChtcsPjPEZQ', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'FPiQJPRFErgb9iJd0e11UmJekZBPevwFsHxGAOea.jpeg', 'mAhCUlqGFDRKV1xjvLbp2rjzccMUWHzGCgxfUH5C.jpeg', 7, '2020-04-18 21:32:08', '2020-04-18 21:32:08'),
-(2, 'Java Basics', 'Java Basics Tutorials by Muhammed Essa', 'https://www.youtube.com/watch?v=fY2LZUqGXPk&list=PLMYF6NkLrdN817O88GXt4xAPmM2bD7pLN', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'g1O7QoaUoNhH1AsAEm6OQtwC6Ldy1YSuIz5zhnuq.jpeg', 'OYKRdlUAHeEoEt5ECX2FpJuUUtZilyumrgHGBAZE.jpeg', 7, '2020-04-18 21:36:38', '2020-04-18 21:36:38'),
-(3, 'Node JS', 'Node JS Tutorials by Muhammed essa', 'https://www.youtube.com/watch?v=wY5V93lGBnY&list=PLMYF6NkLrdN8zyk4SNJboLa94GqWv4cFU', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'x3bxJ26P7d62r1wfhXv7CkK9zgsz7IyUrNB6fyEX.jpeg', 'IbGt6LzLawyoJvQooDmyAwxZAIBibNd78B5lbHWn.jpeg', 7, '2020-04-18 22:33:49', '2020-04-18 22:33:49'),
-(4, 'Laravel Tutorial', 'Laravel Tutorials by Muhammed Essa', 'https://www.youtube.com/embed/A8lv_OXoTn8', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'EFoF4sfaEgw7zlAP80gVRprXY6u0B803mbEbwEee.jpeg', 'lMGk7VEMTx9hytiVqiWe5zYFQDzznR67rNvUThHC.jpeg', 6, '2020-04-18 22:44:44', '2020-04-19 02:07:25'),
-(5, 'Android Tutorials', 'Android Tutorials by Muhammed essa', 'https://www.youtube.com/watch?v=nFin_KqJ98M&list=PLMYF6NkLrdN8giOLjGRx81fjEIaE5ef-8', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '80LAfcGgYSChDRjTYBDKH6QoI6IaB8cOr25k3Xfe.jpeg', 'RxdAKSeSgpZACBdVFw8kF4kuckK19LeiuTI7gODu.png', 6, '2020-04-18 22:46:20', '2020-04-18 22:46:20'),
-(6, 'Python Tutorials', 'Python Tutorials by Muhammed Essa', 'https://www.youtube.com/embed/byV_elXt0ZM', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'VUUXWVPAcaFVXtKZ1qrKvfAQuWKEiktPJyi6WB0J.jpeg', '6mScAydAVnyhykghjQnnwY6xy1ocKU1nYAUwZWMM.jpeg', 6, '2020-04-18 23:45:12', '2020-04-18 23:45:12');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `failed_jobs`
 --
 
@@ -67,6 +36,38 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lessons`
+--
+
+CREATE TABLE `lessons` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `service_id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `subtitle` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `video_link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `lessons`
+--
+
+INSERT INTO `lessons` (`id`, `service_id`, `title`, `subtitle`, `video_link`, `description`, `image`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 8, 'Test_1_Title', 'Test_1_Subtitle', 'https://youtu.be/Ewv9viqybM4?list=PLMYF6NkLrdN_oaGr07xGfHH86meD3By70', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'TjCRyJcgAoNOvNcPAR4yMUqXOBDQOxDkkNqrQoLS.jpeg', 6, '2020-04-21 03:46:17', '2020-04-21 03:46:17'),
+(2, 2, 'Test_2_Title', 'Test_2_Subtitle', 'https://youtu.be/sChpdUMuW8U?list=PLMYF6NkLrdN_oaGr07xGfHH86meD3By70', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'XuyoEgfPbtrQDV4cRMHeAecr7OiNTcrQPzX3kUNH.jpeg', 6, '2020-04-21 03:47:50', '2020-04-21 03:47:50'),
+(3, 2, 'Test_3_Title_Edited', 'Test_3_Subtitle_Edited', 'https://youtu.be/GTgSmKnd0_k?list=PLMYF6NkLrdN_oaGr07xGfHH86meD3By70', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book_Edited.', '7pitskU7G1gtwXhTXRzmxrMmibH1KRbSTltiYp0P.jpeg', 6, '2020-04-21 03:49:57', '2020-04-22 19:46:16'),
+(4, 4, 'Test_4_Title', 'Test_4_Subtitle', 'https://www.youtube.com/embed/Yvi0kXTZWUw', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'XlOT6UIt6WYetZ9DwtoAJntRkTlxxbKqUnqnkRcw.jpeg', 6, '2020-04-22 17:59:31', '2020-04-22 17:59:31'),
+(5, 8, 'Android Development', 'Android Development Tutorials by Muhammed Essa', 'https://youtu.be/nFin_KqJ98M', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'WSaRqtE42ogV8JHpS9jmdhYkBsy4FON6SvXDxLiN.jpeg', 6, '2020-04-22 19:49:33', '2020-04-22 19:49:33'),
+(6, 2, 'Ruby Development', 'Ruby Development by Muhammed Essa', 'https://youtu.be/nhJzwgxId4I', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'ruQ4mLM9WmmphThR8kIIuPcK0vO0s4moGj6zVjsI.jpeg', 6, '2020-04-22 19:51:34', '2020-04-22 19:51:34'),
+(7, 3, 'Python', 'Python Tutorials by Muhammed Essa', 'https://youtu.be/B-BOV-JJRXA', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'C8IGchJnhR7wqykJWi2hzZ4q3Mp6HcxNr311GWpu.jpeg', 6, '2020-04-22 20:00:13', '2020-04-22 20:00:13');
 
 -- --------------------------------------------------------
 
@@ -92,7 +93,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (5, '2020_04_11_103631_create_role_user_table', 1),
 (6, '2020_04_12_125358_create_profiles_table', 1),
 (7, '2020_04_13_082213_create_services_table', 1),
-(10, '2020_04_18_132154_create_courses_table', 2);
+(11, '2020_04_20_191324_create_lessons_table', 3);
 
 -- --------------------------------------------------------
 
@@ -291,18 +292,19 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `pr
 --
 
 --
--- Indexes for table `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `courses_video_link_unique` (`video_link`),
-  ADD KEY `courses_user_id_foreign` (`user_id`);
-
---
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `lessons`
+--
+ALTER TABLE `lessons`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `lessons_video_link_unique` (`video_link`),
+  ADD KEY `lessons_service_id_foreign` (`service_id`),
+  ADD KEY `lessons_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `migrations`
@@ -364,22 +366,22 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `courses`
---
-ALTER TABLE `courses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `lessons`
+--
+ALTER TABLE `lessons`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -422,10 +424,11 @@ ALTER TABLE `users`
 --
 
 --
--- Constraints for table `courses`
+-- Constraints for table `lessons`
 --
-ALTER TABLE `courses`
-  ADD CONSTRAINT `courses_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `lessons`
+  ADD CONSTRAINT `lessons_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `lessons_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `role_user`

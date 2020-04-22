@@ -69,11 +69,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Service');
     }
 
-    //Relation between Users and Courses ( One-to-Many )
-    public function courses()
+    //Relation between Users and Lessons ( One-to-Many )
+    public function lessons()
     {
-        return $this->hasMany('App\Course');
+        return $this->hasMany('App\Lesson');
     }
-
 
 }
