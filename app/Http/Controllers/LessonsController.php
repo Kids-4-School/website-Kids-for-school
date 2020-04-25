@@ -199,6 +199,10 @@ class LessonsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $del = Lesson::find($id);
+        $del->destroy($id);
+
+        return redirect()->route('lessons.all')->with('toast_success', 'Lesson deleted Successfully');
     }
+
 }

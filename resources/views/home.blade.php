@@ -47,7 +47,7 @@
                     <div class="col">
                         <div class="card shadow" style="width:16rem;">
                                 <div class="card-header main_card">
-                                    <span class="text_color">Total Courses</span> 
+                                    <span class="text_color">Total Lessons</span> 
                                     <span class="ml-5"><i class="fab fa-buffer"></i></span>
                                 </div>
                                 <div class="card-header main_card">200

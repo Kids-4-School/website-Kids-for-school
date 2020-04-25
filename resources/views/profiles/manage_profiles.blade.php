@@ -2,20 +2,20 @@
 
 @section('content')
 
-<!--Manage Lessons-->
+<!--Manage Profiles-->
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card card_style">
-                <div class="card-header card_header text-header">Manage Lessons</div>
+                <div class="card-header card_header text-header">Manage Profiles</div>
 
-                <form class="mt-2" action="{{route('search.lesson')}}" method="GET">
+                {{-- <form class="mt-2" action="{{route('search.lesson')}}" method="GET">
                     @csrf
 
                     <div class="form-group row justify-content-center ml-4 mr-4">
                             <input type="text" class="form-control form-control-sty" name="search" placeholder="Search">
                     </div>
-                </form>
+                </form> --}}
 
                 <div class="card-body">
                     
@@ -23,41 +23,41 @@
                         <thead class="table_header">
                           <tr class="table_row">
                             <th class="table_row" scope="col">User</th>
-                            <th class="table_row" scope="col">Service</th>
-                            <th class="table_row" scope="col">Title</th>
-                            <th class="table_row" scope="col">Subtitle</th>
-                            <th class="table_row" scope="col">Image</th>
+                            <th class="table_row" scope="col">Phone No.</th>
+                            <th class="table_row" scope="col">Facebook</th>
+                            <th class="table_row" scope="col">Twitter</th>
+                            <th class="table_row" scope="col">Github</th>
                             <th class="table_row" scope="col">Show</th>
-                            <th class="table_row" scope="col">Edit</th>
                             <th class="table_row" scope="col">Delete</th>
                           </tr>
                         </thead>
                         <tbody>
-                                @foreach ($lessons as $lesson)
+                                @foreach ($profiles as $profile)
                                     <tr class="table_row">
-                                        <td class="table_row">{{$lesson->user->name}}</td>
-                                        <td class="table_row">{{$lesson->service->title}}</td>
-                                        <td class="table_row">{{$lesson->title}}</td>
-                                        <td class="table_row">{{substr($lesson->subtitle,0,25)}}...</td>
                                         <td class="table_row">
-                                            <img class="circle_image" src="{{$lesson->image_path}}" alt="Service Image" width="50" height="50">
+                                            @foreach ($users as $user)
+                                                @if($profile->id == $user->profile_id)
+                                                    {{$user->name}}
+                                                @endif
+                                            @endforeach
                                         </td>
+                                        <td class="table_row">{{$profile->phone_number}}</td>
+                                        <td class="table_row">{{$profile->facebook}}</td>
+                                        <td class="table_row">{{$profile->twitter}}</td>
+                                        <td class="table_row">{{$profile->github}}</td>
                                         
-                                        <td class="table_row">
+                                        {{-- <td class="table_row">
                                             <a class="btn btn-primary btn-green" href="{{route('show.lesson',['id'=>$lesson->id])}}" type="button"><i class="fa fa-eye"></i></a>
-                                        </td>
-                                        <td class="table_row">
-                                            <a class="btn btn-primary btn-edit" href="{{route('edit.lesson',['id'=>$lesson->id])}}" role="button"><i class="fa fa-edit"></i></a>
                                         </td>
                                         <td  class="table_row">
                                             <a href="{{route('delete.lesson',['id'=>$lesson->id])}}" class="btn btn-primary btn-delete" role="button"><i class="fa fa-trash-alt"></i></a>
-                                        </td>
+                                        </td> --}}
                                     </tr>
                                 @endforeach
                         </tbody>
                       </table>
 
-                      {{$lessons->links()}}
+                      {{$profiles->links()}}
 
                 </div>
             </div>
@@ -66,5 +66,5 @@
     </div>
 </div>
 
-<!--Manage Lessons/-->
+<!--Manage Profiles/-->
 @endsection

@@ -8,9 +8,11 @@
 
                 <div class="card-body">
 
-                    <h4 class="register_header">Profile</h4>
+                    <h4 class="register_header ml-5">Profile</h4>
 
-                    <form class="mt-4" action="" method="POST" enctype="multipart/form-data">
+                    @foreach ($profiles as $profile)
+
+                    <form class="mt-4" action="{{route('update.profile',['id'=>$profile->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row justify-content-center">
@@ -98,6 +100,8 @@
                         
                         
                     </form>
+
+                    @endforeach
 
                     <!--Show errors Here-->
                     @if(count($errors)>0)

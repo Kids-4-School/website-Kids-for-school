@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Image;
+use App\User;
 use App\Profile;
 use App\Province;
 
@@ -16,6 +17,16 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
+    //Manage Profiles for Admin
+    public function manageProfiles()
+    {
+        $profiles = Profile::paginate(6);
+        $users = User::all();
+        return view('profiles.manage_profiles')->with('profiles',$profiles)->with('users',$users);
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -23,15 +34,10 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $profiles = Profile::all();
+        $profiles = Profile::where('id','=',auth()->user()->profile_id)->get();
         $provinces = Province::all();
-        foreach($profiles as $profile)
-        {
-            if($profile['user_id'] == auth()->user()->id)
-            {
-                return view('profiles.index_profile')->with('profile',$profile)->with('provinces',$provinces);
-            }
-        }
+
+        return view('profiles.index_profile')->with('profiles',$profiles)->with('provinces',$provinces);
     }
 
     /**
@@ -53,19 +59,19 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        // Validation (,'date_format:d-m-Y')
+        // Validation
         $request->validate([
-            'phone_number' => ['nullable','string','unique:profiles','max:100'],
-            'age' => ['nullable','date','max:100'],
-            'first_address' => ['nullable','string','max:150'],
-            'second_address' => ['nullable','string','max:150'],
-            'city' => ['nullable','string','max:100'],
-            'province' => ['nullable','string','max:100'],
-            'facebook' => ['nullable','string','max:100'],
-            'twitter' => ['nullable','string','max:100'],
-            'github' => ['nullable','string','max:100'],
+            'phone_number' => 'nullable|string|unique:profiles|max:100',
+            'age' => 'nullable|date|max:100',
+            'first_address' => 'nullable|string|max:150',
+            'second_address' => 'nullable|string|max:150',
+            'city' => 'nullable|string|max:100',
+            'province' => 'nullable|string|max:100',
+            'facebook' => 'nullable|string|max:100',
+            'twitter' => 'nullable|string|max:100',
+            'github' => 'nullable|string|max:100',
             'image' => 'image|mimes:jpeg,jpg,png',
-            'biography' => ['nullable','string'],
+            'biography' => 'nullable|string',
         ],[],[
 
             'phone_number' => 'Phone Number ',
@@ -86,8 +92,7 @@ class ProfileController extends Controller
             Image::make($request->image)->save('uploads/profile/'. $request->image->hashName());
         }
 
-
-        auth()->user()->profile()->create([
+        $profile = Profile::create([
             'phone_number' => $request->phone_number,
             'age' => $request->age,
             'first_address' => $request->first_address,
@@ -101,7 +106,12 @@ class ProfileController extends Controller
             'biography' => $request->biography
         ]);
 
-        return redirect()->back()->with('toast_success', 'Profile Created Successfully');
+        auth()->user()->update([
+            'profile_id' => $profile->id
+        ]);
+        
+
+        return redirect()->route('home')->with('toast_success', 'Profile Created Successfully');
     }
 
     /**
@@ -135,7 +145,56 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $profile=Profile::find($id);
+
+        // Validation
+        $request->validate([
+            'phone_number' => 'nullable|string|unique:profiles|max:100',
+            'age' => 'nullable|date|max:100',
+            'first_address' => 'nullable|string|max:150',
+            'second_address' => 'nullable|string|max:150',
+            'city' => 'nullable|string|max:100',
+            'province' => 'nullable|string|max:100',
+            'facebook' => 'nullable|string|max:100',
+            'twitter' => 'nullable|string|max:100',
+            'github' => 'nullable|string|max:100',
+            'image' => 'nullable|image|mimes:jpeg,jpg,png',
+            'biography' => 'nullable|string',
+        ],[],[
+
+            'phone_number' => 'Phone Number ',
+            'age' => 'Age ',
+            'first_address' => 'First Address ',
+            'second_address' => 'Second Address ',
+            'city' => 'City ',
+            'province' => 'Province ',
+            'facebook' => 'Facebook ',
+            'twitter' => 'Twitter ',
+            'github' => 'Github ',
+            'image' => 'Photo ',
+            'biography' => 'Biography ',
+
+        ]);
+
+        //Check for Profile Image Upload 
+        if($request->image){
+            Image::make($request->image)->save('uploads/profile/'. $request->image->hashName());
+        }
+
+        $profile->phone_number = $request->phone_number;
+        $profile->age = $request->age;
+        $profile->first_address = $request->first_address;
+        $profile->second_address = $request->second_address;
+        $profile->city = $request->city;
+        $profile->province = $request->province;
+        $profile->facebook = $request->facebook;
+        $profile->twitter = $request->twitter;
+        $profile->github = $request->github;
+        $profile->image = $request->image->hashName();
+        $profile->biography = $request->biography;
+        $profile->save();
+
+        return redirect()->route('home')->with('toast_success', 'Your profile updated sucessfully');
     }
 
     /**

@@ -29,11 +29,13 @@ Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->n
 //Route to Show Users for admin
 Route::get('all/users','Admin\UserController@viewUsers')->name('view.users')->middleware(['auth','auth.admin']);
 
+
 //Route for Profiles 
+Route::get('/profiles/all' , 'ProfileController@manageProfiles')->name('profiles.all')->middleware(['auth','auth.admin']);
 Route::get('/profile' , 'ProfileController@index')->name('profiles');
 Route::get('/profile/create','ProfileController@create')->name('create.profile');
 Route::post('/profile/new','ProfileController@store')->name('profile.new');
-
+Route::post('/profile/update/{id}','ProfileController@update')->name('update.profile');
 
 
 //Route for Services 
@@ -54,7 +56,7 @@ Route::post('/lesson/new','LessonsController@store')->name('lesson.new');
 Route::get('/lesson/show/{id}','LessonsController@show')->name('show.lesson');
 Route::get('/lesson/edit/{id}','LessonsController@edit')->name('edit.lesson');
 Route::post('/lesson/update/{id}','LessonsController@update')->name('update.lesson');
-// Route::get('/video/delete/{id}','LessonsController@destroy')->name('delete.video');
+Route::get('/lesson/delete/{id}','LessonsController@destroy')->name('delete.lesson');
 Route::get('/lesson/search','LessonsController@search')->name('search.lesson');
 
 

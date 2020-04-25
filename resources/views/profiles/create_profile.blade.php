@@ -8,7 +8,7 @@
 
                 <div class="card-body">
 
-                    <h4 class="register_header">Profile</h4>
+                    <h4 class="register_header ml-5">Profile</h4>
 
                     <form class="mt-4" action="{{route('profile.new')}}" method="POST" enctype="multipart/form-data">
                         @csrf
