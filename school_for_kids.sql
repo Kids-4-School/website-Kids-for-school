@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 02:38 AM
+-- Generation Time: Apr 27, 2020 at 11:08 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -63,7 +63,9 @@ CREATE TABLE `lessons` (
 INSERT INTO `lessons` (`id`, `service_id`, `title`, `subtitle`, `video_link`, `description`, `image`, `user_id`, `created_at`, `updated_at`) VALUES
 (2, 2, 'Test_2_Title', 'Test_2_Subtitle', 'https://youtu.be/sChpdUMuW8U?list=PLMYF6NkLrdN_oaGr07xGfHH86meD3By70', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'XuyoEgfPbtrQDV4cRMHeAecr7OiNTcrQPzX3kUNH.jpeg', 6, '2020-04-21 03:47:50', '2020-04-21 03:47:50'),
 (3, 2, 'Test_3_Title_Edited', 'Test_3_Subtitle_Edited', 'https://youtu.be/GTgSmKnd0_k?list=PLMYF6NkLrdN_oaGr07xGfHH86meD3By70', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book_Edited.', '7pitskU7G1gtwXhTXRzmxrMmibH1KRbSTltiYp0P.jpeg', 6, '2020-04-21 03:49:57', '2020-04-22 19:46:16'),
-(6, 2, 'Ruby Development', 'Ruby Development by Muhammed Essa', 'https://youtu.be/nhJzwgxId4I', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'ruQ4mLM9WmmphThR8kIIuPcK0vO0s4moGj6zVjsI.jpeg', 6, '2020-04-22 19:51:34', '2020-04-22 19:51:34');
+(6, 2, 'Ruby Development', 'Ruby Development by Muhammed Essa', 'https://youtu.be/nhJzwgxId4I', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'ruQ4mLM9WmmphThR8kIIuPcK0vO0s4moGj6zVjsI.jpeg', 6, '2020-04-22 19:51:34', '2020-04-22 19:51:34'),
+(8, 12, 'kareem Lesson', 'kareem Lesson tutorial', 'https://youtu.be/bIGMPK6koBo', 'This is Tutorial', 'Him2RvUD8ObhiHqksDSeQOsyIe51Dg2u2NGz9M59.jpeg', 10, '2020-04-27 07:58:35', '2020-04-27 07:58:35'),
+(9, 13, 'Graphic Design', 'Graphic Design Tutorial by Dansky', 'https://youtu.be/HzT0kJ949W4', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'OEkQGRiaKcy6EUt4RLd1J2m9JARFtZwJPjxVwTLJ.jpeg', 10, '2020-04-27 21:19:37', '2020-04-27 21:19:37');
 
 -- --------------------------------------------------------
 
@@ -133,8 +135,7 @@ CREATE TABLE `profiles` (
 INSERT INTO `profiles` (`id`, `phone_number`, `age`, `first_address`, `second_address`, `city`, `province`, `facebook`, `twitter`, `github`, `image`, `biography`, `created_at`, `updated_at`) VALUES
 (9, '07806543214', '2020-03-18', 'TestOmer', 'TestOmer', 'TestOmer', 'Deyala', 'TestOmer', 'TestOmer', 'TestOmer', 'sJ815hJD9jD9Est9O7mJVPXlaShtHGl40Lqq4gpF.jpeg', 'TestOmer', '2020-04-23 23:47:23', '2020-04-23 23:47:23'),
 (10, '07800051234', '1990-04-22', 'Tareq_Address_Edited', 'Tareq_Address_Edited', 'Baghdad_Edited', 'Baghdad', 'Tareq_Facebook_Edited', 'Tareq_Twitter_Edited', 'Tareq_Github_Edited', 'khtxAN4UsNHBkvZBszZD9Jomja4WmTfaZE9WaUUA.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '2020-04-24 21:07:10', '2020-04-25 03:01:15'),
-(11, '07906543213', '2020-04-22', 'Test_Ali_Address', 'Test_Ali_Address', 'Erbil', 'Erbil', 'Test_Ali_Facebook', 'Test_Ali_Twitter', 'Test_Ali_Github', 'pVPytzbgegznXDCFsWm7lxdTveAulVw13Y5V4UB8.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '2020-04-25 04:34:01', '2020-04-25 04:34:01'),
-(12, '07906578123', '2020-04-23', 'Abbas_Address', 'Abbas_Address', 'Mosul', 'Mousl', 'Abbas_Facebook', 'Abbas_Twitter', 'Abbas_Github', 'xgHIG2jr7WRcaEy4ItGcumAD0KlRgmxvbXITOoLc.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '2020-04-25 04:44:54', '2020-04-25 04:44:54');
+(11, '07906543213', '2020-04-22', 'Test_Ali_Address', 'Test_Ali_Address', 'Erbil', 'Erbil', 'Test_Ali_Facebook', 'Test_Ali_Twitter', 'Test_Ali_Github', 'pVPytzbgegznXDCFsWm7lxdTveAulVw13Y5V4UB8.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '2020-04-25 04:34:01', '2020-04-25 04:34:01');
 
 -- --------------------------------------------------------
 
@@ -221,8 +222,8 @@ INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`)
 (5, 4, 5, NULL, NULL),
 (6, 4, 6, NULL, NULL),
 (8, 4, 3, NULL, NULL),
-(9, 4, 8, NULL, NULL),
-(10, 4, 9, NULL, NULL);
+(10, 4, 9, NULL, NULL),
+(11, 4, 10, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -245,10 +246,11 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `image`, `description`, `user_id`, `created_at`, `updated_at`) VALUES
-(2, 'Service_1_', 'axlAr37hPUYFstE25C1OjyhcopJBklVBlvLm7GJH.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 6, '2020-04-13 19:32:19', '2020-04-13 19:32:19'),
+(2, 'Service_1_Edited', 'dJkfZTno8wO1NdmIctDYqTMWiFvCjldvFQeMUtmJ.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 6, '2020-04-13 19:32:19', '2020-04-27 04:12:11'),
 (10, 'Tareq_Service', 'pNq6zy3eGHJYj7FSgBygPxXQEdCiL1ApGQXuBieX.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 9, '2020-04-25 04:03:20', '2020-04-25 04:03:20'),
 (11, 'English Learning', 'LG3QBo8HquyJQkmHhMBvbVQUYNu2n8A4Bf5LYtwS.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 9, '2020-04-25 04:04:48', '2020-04-25 04:04:48'),
-(12, 'Data Science', 'xQ9abg1WoJXma1cl9evZcUt9FjngF7bfkXVQ2ZIu.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 9, '2020-04-25 04:05:16', '2020-04-25 04:05:16');
+(12, 'Data Science', 'xQ9abg1WoJXma1cl9evZcUt9FjngF7bfkXVQ2ZIu.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 9, '2020-04-25 04:05:16', '2020-04-25 04:05:16'),
+(13, 'Graphic Design', 'p0UE3Th8TCiQb9XImVkMc2Z6FfY5loy5sHzyenvv.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 10, '2020-04-27 21:15:23', '2020-04-27 21:15:23');
 
 -- --------------------------------------------------------
 
@@ -279,8 +281,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `pr
 (4, 'user', 'user@gmail.com', NULL, '$2y$10$IldbyXdY20qM0wZTZE/DAedE/TCuAPFXbLOG3Xjzf2d8fiH/d3eSq', NULL, NULL, '2020-04-13 18:06:42', '2020-04-13 18:06:42'),
 (5, 'khalid', 'khalid@gmail.com', NULL, '$2y$10$oy9LTN5J/N4tTza0mLufvOaA7xd/2uXyF.kL1y1JnxAFL6OD.Jciu', 9, NULL, '2020-04-13 18:10:31', '2020-04-23 23:47:23'),
 (6, 'Ali', 'ali@gmail.com', NULL, '$2y$10$r8LyFAjKRhXxaLiqhwTVWOA1gOZ1npi3oKObt23N3RFuvQUyhMd5.', 11, NULL, '2020-04-13 19:22:47', '2020-04-25 04:34:01'),
-(8, 'Abbas', 'abbas@gmail.com', NULL, '$2y$10$TeQJTjZxf6lO/k1x4TU.yub8rVviZNTZO6jeOSn3dXrNFrmI7NgEC', 12, NULL, '2020-04-19 05:12:46', '2020-04-25 04:44:54'),
-(9, 'tareq', 'tareq@gmail.com', NULL, '$2y$10$G7BqXrsD3F9JLK2ujeGcc.MqLVNl4BixsNZWqO/F9Hrkm6L0jIRm.', 10, NULL, '2020-04-24 21:04:25', '2020-04-24 21:07:10');
+(9, 'tareq', 'tareq@gmail.com', NULL, '$2y$10$G7BqXrsD3F9JLK2ujeGcc.MqLVNl4BixsNZWqO/F9Hrkm6L0jIRm.', 10, NULL, '2020-04-24 21:04:25', '2020-04-24 21:07:10'),
+(10, 'Kareem', 'kareem@gmail.com', NULL, '$2y$10$EI1oQnGlTtq7adkv6orvSu4D61jrI7UDTJ57uHV/RkgGUDlHKQqxu', NULL, NULL, '2020-04-27 03:24:59', '2020-04-27 03:24:59');
 
 --
 -- Indexes for dumped tables
@@ -370,7 +372,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `lessons`
 --
 ALTER TABLE `lessons`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -400,19 +402,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

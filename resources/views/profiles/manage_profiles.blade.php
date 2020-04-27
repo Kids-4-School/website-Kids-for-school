@@ -46,12 +46,9 @@
                                         <td class="table_row">{{$profile->twitter}}</td>
                                         <td class="table_row">{{$profile->github}}</td>
                                         
-                                        {{-- <td class="table_row">
-                                            <a class="btn btn-primary btn-green" href="{{route('show.lesson',['id'=>$lesson->id])}}" type="button"><i class="fa fa-eye"></i></a>
+                                        <td class="table_row">
+                                            <a class="btn btn-primary btn-green" href="{{route('show.profile',['id'=>$profile->id])}}" type="button"><i class="fa fa-eye"></i></a>
                                         </td>
-                                        <td  class="table_row">
-                                            <a href="{{route('delete.lesson',['id'=>$lesson->id])}}" class="btn btn-primary btn-delete" role="button"><i class="fa fa-trash-alt"></i></a>
-                                        </td> --}}
                                     </tr>
                                 @endforeach
                         </tbody>

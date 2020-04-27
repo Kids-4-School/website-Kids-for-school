@@ -285,6 +285,13 @@
     height:400px;
 }
 
+/*
+    Single Profile Card
+*/
+.profile_card{
+    font-family:opensans_Regular !important;
+    font-size:20px;
+}
 
 
 /*

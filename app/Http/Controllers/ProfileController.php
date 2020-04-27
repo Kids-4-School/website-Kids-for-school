@@ -122,7 +122,9 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+        $profiles = Profile::find($id);
+        $users = User::all();
+        return view('profiles.show_profile')->with('profile',$profiles)->with('users',$users);
     }
 
     /**
@@ -205,6 +207,7 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
+
 }

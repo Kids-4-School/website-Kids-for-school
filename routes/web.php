@@ -28,7 +28,7 @@ Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->n
 
 //Route to Show Users for admin
 Route::get('all/users','Admin\UserController@viewUsers')->name('view.users')->middleware(['auth','auth.admin']);
-
+Route::get('/users/search','Admin\UserController@search')->name('search.users')->middleware(['auth','auth.admin']);
 
 //Route for Profiles 
 Route::get('/profiles/all' , 'ProfileController@manageProfiles')->name('profiles.all')->middleware(['auth','auth.admin']);
@@ -36,6 +36,7 @@ Route::get('/profile' , 'ProfileController@index')->name('profiles');
 Route::get('/profile/create','ProfileController@create')->name('create.profile');
 Route::post('/profile/new','ProfileController@store')->name('profile.new');
 Route::post('/profile/update/{id}','ProfileController@update')->name('update.profile');
+Route::get('/profile/show/{id}','ProfileController@show')->name('show.profile')->middleware(['auth','auth.admin']);
 
 
 //Route for Services 
@@ -45,7 +46,11 @@ Route::get('/service/create','ServicesController@create')->name('create.service'
 Route::post('/service/new','ServicesController@store')->name('service.new');
 Route::get('/service/edit/{id}','ServicesController@edit')->name('edit.service');
 Route::post('/service/update/{id}','ServicesController@update')->name('update.service');
+Route::get('/service/show/{id}','ServicesController@show')->name('show.service')->middleware(['auth','auth.admin']);
+Route::get('/service/user/show/{id}','ServicesController@userServiceShow')->name('user.show.service');
 Route::get('/service/delete/{id}','ServicesController@destroy')->name('delete.service');
+Route::get('/service/search','ServicesController@search')->name('search.service');
+
 
 
 //Route for Lessons 

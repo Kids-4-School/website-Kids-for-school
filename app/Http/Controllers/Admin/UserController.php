@@ -9,7 +9,6 @@ use App\User;
 use App\Role;
 Use Alert;
 
-
 class UserController extends Controller
 {
     /**
@@ -67,6 +66,25 @@ class UserController extends Controller
 
         return redirect()->route('admin.users.index')->with('toast_success', 'Updated Successfully');
     }
+
+
+    //Users Search
+    public function search(Request $request)
+    {
+        // Validation
+        $request->validate([
+            'search' => 'required|string|min:4|max:200'
+        ],[],[
+            'search' => 'Name '
+        ]);
+
+        $search = $request->input('search');
+        $users = User::where('name','like',"%$search%")->get();
+
+        return view('admin.users.results')->with('users',$users);
+
+    }
+
 
     /**
      * Remove the specified resource from storage.

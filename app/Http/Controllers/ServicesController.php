@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Service;
+use App\User;
 use Image;
 
 class ServicesController extends Controller
@@ -99,8 +100,20 @@ class ServicesController extends Controller
      */
     public function show($id)
     {
-        //
+        $services = Service::find($id);
+        $users = User::all();
+        return view('services.show_service')->with('service',$services)->with('users',$users);
     }
+
+
+    //User Service Show 
+    public function userServiceShow($id)
+    {
+        $services = Service::find($id);
+        $users = User::all();
+        return view('services.show_service')->with('service',$services)->with('users',$users);
+    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -149,6 +162,39 @@ class ServicesController extends Controller
 
         return redirect()->route('services')->with('toast_success', 'Your Service updated sucessfully');
     }
+
+
+    //Services Search
+    public function search(Request $request)
+    {
+        // Validation
+        $request->validate([
+            'search' => 'required|string|min:4|max:200'
+        ],[],[
+            'search' => 'Title '
+        ]);
+
+        $search = $request->input('search');
+        $services = Service::where('title','like',"%$search%")->get();
+
+        foreach($services as $service)
+        {
+            if($service->user_id == auth()->user()->id)
+            {
+                return view('services.results')->with('services',$services);
+            }
+            else if(auth()->user()->hasAnyRole('admin'))
+            {
+                return view('services.results')->with('services',$services);
+            }
+            else
+            {
+                return redirect()->route('services')->with('toast_info', 'Not found');
+            }
+        }
+
+    }
+
 
     /**
      * Remove the specified resource from storage.

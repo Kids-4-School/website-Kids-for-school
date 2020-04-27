@@ -9,6 +9,14 @@
             <div class="card card_style">
                 <div class="card-header card_header text-header">My Services</div>
 
+                <form class="mt-2" action="{{route('search.service')}}" method="GET">
+                  @csrf
+
+                  <div class="form-group row justify-content-center ml-4 mr-4">
+                          <input type="text" class="form-control form-control-sty" name="search" placeholder="Search by Title">
+                  </div>
+                </form>
+
                 <div class="card-body">
                     
                     <table class="table">
@@ -23,7 +31,6 @@
                         </thead>
                         <tbody>
                                 @foreach ($services as $service)
-                                {{-- @if($service->user_id == auth()->user()->id) --}}
                                     <tr class="table_row">
                                         <td class="table_row">{{$service->title}}</td>
                                         <td class="table_row">
@@ -38,7 +45,6 @@
                                             <a class="btn btn-primary btn-edit" href="{{route('edit.service',$service->id)}}" role="button"><i class="fa fa-edit"></i></a>
                                         </td>
                                     </tr>
-                                {{-- @endif --}}
                                 @endforeach
                         </tbody>
                       </table>

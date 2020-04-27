@@ -9,6 +9,14 @@
             <div class="card card_style">
                 <div class="card-header card_header text-header">Manage Services</div>
 
+                <form class="mt-2" action="{{route('search.service')}}" method="GET">
+                  @csrf
+
+                  <div class="form-group row justify-content-center ml-4 mr-4">
+                          <input type="text" class="form-control form-control-sty" name="search" placeholder="Search by Title">
+                  </div>
+                </form>
+
                 <div class="card-body">
                     
                     <table class="table">

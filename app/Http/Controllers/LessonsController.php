@@ -66,11 +66,11 @@ class LessonsController extends Controller
         // Validation
         $request->validate([
             'service_id' => 'required',
-            'title' => ['required','string','max:200'],
-            'subtitle' => ['required','string','max:255'],
-            'video_link' => ['required','string','unique:lessons','max:300'],
-            'description' => ['required','string'],
-            'image' => ['required','image','mimes:jpeg,jpg,png'],
+            'title' => 'required|string|max:200',
+            'subtitle' => 'required|string|max:255',
+            'video_link' => 'required|string|unique:lessons|max:300',
+            'description' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,jpg,png',
         ],[],[
 
             'service_id' => 'Service ',
@@ -141,11 +141,11 @@ class LessonsController extends Controller
         // Validation
         $request->validate([
             'service_id' => 'required',
-            'title' => ['required','string','max:200'],
-            'subtitle' => ['required','string','max:255'],
-            'video_link' => ['required','string','max:300'],
-            'description' => ['required','string'],
-            'image' => ['required','image','mimes:jpeg,jpg,png'],
+            'title' => 'required|string|max:200',
+            'subtitle' => 'required|string|max:255',
+            'video_link' => 'required|string|max:300',
+            'description' => 'required|string',
+            'image' => 'required|image|mimes:jpeg,jpg,png',
         ],[],[
 
             'service_id' => 'Service ',
@@ -187,7 +187,22 @@ class LessonsController extends Controller
         $search = $request->input('search');
         $lessons = Lesson::where('title','like',"%$search%")->get();
 
-        return view('lessons.results')->with('lessons',$lessons);
+        foreach($lessons as $lesson)
+        {
+            if($lesson->user_id == auth()->user()->id)
+            {
+                return view('lessons.results')->with('lessons',$lessons);
+            }
+            else if(auth()->user()->hasAnyRole('admin'))
+            {
+                return view('lessons.results')->with('lessons',$lessons);
+            }
+            else
+            {
+                return redirect()->route('lessons')->with('toast_info', 'Not found');
+            }
+        }
+        
     }
 
 
