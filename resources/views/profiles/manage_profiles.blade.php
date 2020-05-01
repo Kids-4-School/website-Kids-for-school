@@ -28,7 +28,6 @@
                             <th class="table_row" scope="col">Twitter</th>
                             <th class="table_row" scope="col">Github</th>
                             <th class="table_row" scope="col">Show</th>
-                            <th class="table_row" scope="col">Delete</th>
                           </tr>
                         </thead>
                         <tbody>

@@ -30,6 +30,7 @@ Route::namespace('Admin')->prefix('admin')->middleware(['auth','auth.admin'])->n
 Route::get('all/users','Admin\UserController@viewUsers')->name('view.users')->middleware(['auth','auth.admin']);
 Route::get('/users/search','Admin\UserController@search')->name('search.users')->middleware(['auth','auth.admin']);
 
+
 //Route for Profiles 
 Route::get('/profiles/all' , 'ProfileController@manageProfiles')->name('profiles.all')->middleware(['auth','auth.admin']);
 Route::get('/profile' , 'ProfileController@index')->name('profiles');

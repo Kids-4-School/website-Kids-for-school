@@ -187,15 +187,29 @@ class LessonsController extends Controller
         $search = $request->input('search');
         $lessons = Lesson::where('title','like',"%$search%")->get();
 
-        foreach($lessons as $lesson)
+        if(count($lessons) >0)
         {
-            if($lesson->user_id == auth()->user()->id)
+            foreach($lessons as $lesson)
             {
-                return view('lessons.results')->with('lessons',$lessons);
+                if($lesson->user_id == auth()->user()->id)
+                {
+                    return view('lessons.results')->with('lessons',$lessons);
+                }
+                else if(auth()->user()->hasAnyRole('admin'))
+                {
+                    return view('lessons.results')->with('lessons',$lessons);
+                }
+                else
+                {
+                    return redirect()->route('lessons')->with('toast_info', 'Not found');
+                }
             }
-            else if(auth()->user()->hasAnyRole('admin'))
+        }
+        else
+        {
+            if(auth()->user()->hasAnyRole('admin'))
             {
-                return view('lessons.results')->with('lessons',$lessons);
+                return redirect()->route('lessons.all')->with('toast_info', 'Not found');
             }
             else
             {

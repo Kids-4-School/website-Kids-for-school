@@ -177,15 +177,29 @@ class ServicesController extends Controller
         $search = $request->input('search');
         $services = Service::where('title','like',"%$search%")->get();
 
-        foreach($services as $service)
+        if(count($services) > 0)
         {
-            if($service->user_id == auth()->user()->id)
+            foreach($services as $service)
             {
-                return view('services.results')->with('services',$services);
+                if($service->user_id == auth()->user()->id)
+                {
+                    return view('services.results')->with('services',$services);
+                }
+                else if(auth()->user()->hasAnyRole('admin'))
+                {
+                    return view('services.results')->with('services',$services);
+                }
+                else
+                {
+                    return redirect()->route('services')->with('toast_info', 'Not found');
+                }
             }
-            else if(auth()->user()->hasAnyRole('admin'))
+        }
+        else
+        {
+            if(auth()->user()->hasAnyRole('admin'))
             {
-                return view('services.results')->with('services',$services);
+                return redirect()->route('services.all')->with('toast_info', 'Not found');
             }
             else
             {

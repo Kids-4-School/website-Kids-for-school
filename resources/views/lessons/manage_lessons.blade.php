@@ -13,7 +13,7 @@
                     @csrf
 
                     <div class="form-group row justify-content-center ml-4 mr-4">
-                            <input type="text" class="form-control form-control-sty" name="search" placeholder="Search">
+                            <input type="text" class="form-control form-control-sty" name="search" placeholder="Search by Title">
                     </div>
                 </form>
 

@@ -25,6 +25,7 @@
                             <th class="table_row" scope="col">Name</th>
                             <th class="table_row" scope="col">Email</th>
                             <th class="table_row" scope="col">Roles</th>
+                            <th class="table_row" scope="col">Profile</th>
                             <th class="table_row" scope="col">Edit</th>
                             <th class="table_row" scope="col">Delete</th>
                           </tr>
@@ -35,6 +36,13 @@
                                     <td class="table_row">{{$user->name}}</td>
                                     <td class="table_row">{{$user->email}}</td>
                                     <td class="table_row">{{implode(' - ',$user->roles()->get()->pluck('role')->toArray())}}</td>
+                                    <td class="table_row">
+                                        @foreach ($profiles as $profile)
+                                            @if($user->profile_id == $profile->id)
+                                                <a href="{{route('show.profile',['id'=>$profile->id])}}"><span class="badge badge-pill badge-primary badge_green_profile"><i class="far fa-arrow-alt-circle-right"></i></span></a>
+                                            @endif
+                                        @endforeach
+                                    </td>
                                     <td class="table_row">
                                         <a class="btn btn-primary btn-edit" href="{{route('admin.users.edit',$user->id)}}" role="button"><i class="fa fa-edit"></i></a>
                                     </td>

@@ -16,7 +16,7 @@
                                     <span class="text_color">Total Users</span> 
                                     <span class="ml-5"><i class="fas fa-users"></i></span>
                                 </div>
-                                <div class="card-header main_card">200
+                                <div class="card-header main_card">{{$users}}
                                     @hasrole('admin') 
                                         <a href="{{route('admin.users.index')}}">
                                             <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
@@ -33,9 +33,9 @@
                                     <span class="text_color">Total Services</span> 
                                     <span class="ml-5"><i class="fas fa-school"></i></span>
                                 </div>
-                                <div class="card-header main_card">200
+                                <div class="card-header main_card">{{$services}}
                                     @hasrole('admin') 
-                                        <a href="{{route('admin.users.index')}}">
+                                        <a href="{{route('services.all')}}">
                                             <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
                                         </a>
                                     @endhasrole
@@ -50,9 +50,9 @@
                                     <span class="text_color">Total Lessons</span> 
                                     <span class="ml-5"><i class="fab fa-buffer"></i></span>
                                 </div>
-                                <div class="card-header main_card">200
+                                <div class="card-header main_card">{{$lessons}}
                                     @hasrole('admin') 
-                                        <a href="{{route('admin.users.index')}}">
+                                        <a href="{{route('lessons.all')}}">
                                             <span class="ml-5 align-top"><i class="fa fa-arrow-alt-circle-right icon_color"></i></span>
                                         </a>
                                     @endhasrole

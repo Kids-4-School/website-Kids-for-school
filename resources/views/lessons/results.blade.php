@@ -8,7 +8,15 @@
         <div class="col-md-10">
             <div class="card card_style">
                 <div class="card-header card_header text-header">Search Results
+                    
+                    @hasrole('admin')
+                    <a class="float-right" href="{{route('lessons.all')}}"><span class="badge badge-secondary badge_green"><i class="fas fa-arrow-alt-circle-left"></i></span></a>
+                    @endhasrole
+
+                    @hasrole('user')
                     <a class="float-right" href="{{route('lessons')}}"><span class="badge badge-secondary badge_green"><i class="fas fa-arrow-alt-circle-left"></i></span></a>
+                    @endhasrole
+
                 </div>
 
                 <div class="card-body">
@@ -21,6 +29,9 @@
                             <th class="table_row" scope="col">Subtitle</th>
                             <th class="table_row" scope="col">Show</th>
                             <th class="table_row" scope="col">Edit</th>
+                            @hasrole('admin')
+                            <th class="table_row" scope="col">Delete</th>
+                            @endhasrole
                           </tr>
                         </thead>
                         <tbody>
@@ -35,6 +46,11 @@
                                     <td class="table_row">
                                         <a class="btn btn-primary btn-edit" href="{{route('edit.lesson',['id'=>$lesson->id])}}" role="button"><i class="fa fa-edit"></i></a>
                                     </td>
+                                    @hasrole('admin')
+                                        <td  class="table_row">
+                                            <a href="{{route('delete.lesson',['id'=>$lesson->id])}}" class="btn btn-primary btn-delete" role="button"><i class="fa fa-trash-alt"></i></a>
+                                        </td>
+                                    @endhasrole
                                 </tr>
                             @endforeach 
                         </tbody>

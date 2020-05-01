@@ -65,6 +65,14 @@
     border-color:#50BFA0;
 }
 
+/*
+    Users Profile badge
+*/
+.badge_green_profile{
+    color:#fff !important;
+    background-color:#50BFA0 !important;
+}
+
 
 /*
     Buttons Style 

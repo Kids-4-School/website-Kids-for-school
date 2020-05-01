@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Service;
+use App\Lesson;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::count();
+        $services = Service::count();
+        $lessons = Lesson::count();
+
+        return view('home')->with('users',$users)
+                           ->with('services',$services)
+                           ->with('lessons',$lessons);
     }
 }

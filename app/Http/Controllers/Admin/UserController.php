@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\User;
 use App\Role;
+use App\Profile;
 Use Alert;
 
 class UserController extends Controller
@@ -19,7 +20,8 @@ class UserController extends Controller
     public function index()
     {
         $users = User::paginate(6);
-        return view('admin.users.index')->with('users',$users);
+        $profiles = Profile::all();
+        return view('admin.users.index')->with('users',$users)->with('profiles',$profiles);
     }
 
     public function viewUsers()
