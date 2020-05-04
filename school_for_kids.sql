@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2020 at 12:15 AM
+-- Generation Time: May 05, 2020 at 01:17 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -224,7 +224,9 @@ INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`)
 (6, 4, 6, NULL, NULL),
 (8, 4, 3, NULL, NULL),
 (10, 4, 9, NULL, NULL),
-(11, 4, 10, NULL, NULL);
+(11, 4, 10, NULL, NULL),
+(12, 4, 11, NULL, NULL),
+(13, 4, 12, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -282,7 +284,9 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `pr
 (5, 'khalid', 'khalid@gmail.com', NULL, '$2y$10$oy9LTN5J/N4tTza0mLufvOaA7xd/2uXyF.kL1y1JnxAFL6OD.Jciu', 9, NULL, '2020-04-13 18:10:31', '2020-04-23 23:47:23'),
 (6, 'Ali', 'ali@gmail.com', NULL, '$2y$10$r8LyFAjKRhXxaLiqhwTVWOA1gOZ1npi3oKObt23N3RFuvQUyhMd5.', 11, NULL, '2020-04-13 19:22:47', '2020-04-25 04:34:01'),
 (9, 'tareq', 'tareq@gmail.com', NULL, '$2y$10$G7BqXrsD3F9JLK2ujeGcc.MqLVNl4BixsNZWqO/F9Hrkm6L0jIRm.', 10, NULL, '2020-04-24 21:04:25', '2020-04-24 21:07:10'),
-(10, 'Kareem', 'kareem@gmail.com', NULL, '$2y$10$EI1oQnGlTtq7adkv6orvSu4D61jrI7UDTJ57uHV/RkgGUDlHKQqxu', 13, NULL, '2020-04-27 03:24:59', '2020-05-01 05:11:01');
+(10, 'Kareem', 'kareem@gmail.com', NULL, '$2y$10$EI1oQnGlTtq7adkv6orvSu4D61jrI7UDTJ57uHV/RkgGUDlHKQqxu', 13, NULL, '2020-04-27 03:24:59', '2020-05-01 05:11:01'),
+(11, 'Jasem', 'jasem@gmail.com', NULL, '$2y$10$yF14YHllRYg5AyEBk90PHezvf2d8mJhNiC9Y2DnLhW7Wtske5HiIe', NULL, 'c0lcwJpBjt1t5ZHFuPhLmxAS2GMmW5RxLz1TEOgLjmrf5dxAkN3hhuXZFiTI', '2020-05-05 00:49:00', '2020-05-05 01:00:00'),
+(12, 'Usama', 'skx39651@bcaoo.com', '2020-05-05 06:08:28', '$2y$10$nWqnW0FjSwQB/D/WtkyB/um.Asyl0.CPJZ5ADMZJeO8i13JYOuzhq', NULL, NULL, '2020-05-05 06:05:51', '2020-05-05 06:08:28');
 
 --
 -- Indexes for dumped tables
@@ -402,7 +406,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -414,7 +418,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
