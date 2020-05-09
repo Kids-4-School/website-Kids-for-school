@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -63,7 +63,14 @@
             }
         </style>
     </head>
-    <body>
+    <body> --}}
+
+
+        <!--Header-->
+        @include('includes.header')
+        <!--Header/-->
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -96,5 +103,9 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+
+    <!--Footer-->
+    @include('includes.footer')
+    <!--Footer/-->
+        

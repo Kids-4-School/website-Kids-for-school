@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -64,5 +64,11 @@ Route::get('/lesson/edit/{id}','LessonsController@edit')->name('edit.lesson');
 Route::post('/lesson/update/{id}','LessonsController@update')->name('update.lesson');
 Route::get('/lesson/delete/{id}','LessonsController@destroy')->name('delete.lesson');
 Route::get('/lesson/search','LessonsController@search')->name('search.lesson');
+
+
+// Route for UI
+Route::get('/','UIController@index')->name('index');
+Route::get('/programs','UIController@programs')->name('programs');
+Route::get('/about','UIController@abouts')->name('about');
 
 
