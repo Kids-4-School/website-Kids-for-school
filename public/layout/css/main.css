@@ -43,10 +43,15 @@ body {
     margin-top: 23px;
 }
 
-
-/*
-added
-*/
+.navbar-expand-lg .nav-item .nav-link .parallelogram {
+    position: absolute;
+    width: 100.95px;
+    height: 44.08px;
+    margin-top: 23px;
+    transform: skew(20deg);
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 1px 1px #DDD;
+}
 
 .navbar-expand-lg .nav-item .nav-link .parallelnavcolor{
     position: absolute;
@@ -56,17 +61,6 @@ added
     background-color: #fff;
     box-shadow: 1px 1px 1px 1px #DDD;
     margin-top: 23px;
-}
-
-
-.navbar-expand-lg .nav-item .nav-link .parallelogram {
-    position: absolute;
-    width: 100.95px;
-    height: 44.08px;
-    margin-top: 23px;
-    transform: skew(20deg);
-    background-color: #FFFFFF;
-    box-shadow: 1px 1px 1px 1px #DDD;
 }
 
 .navbar-expand-lg .nav-item .txt {
@@ -230,15 +224,15 @@ added
 }
 
 .card_about .code_info .card-about-code img {
-    width: 700px;
+    width: 619px;
     margin-top: -70px;
-    margin-left: -45px
+    height: 560px;
+    margin-left: -45px;
 }
 
 .card_about .code_info .card {
-    margin-top: -402px;
-    margin-top: -522px;
-    width: 484px;
+    margin-top: -418px;
+    width: 405px;
     padding-left: 18px;
     padding-right: 18px;
     text-align: end;
@@ -263,9 +257,8 @@ added
 
 .card_about .code_info .logo img {
     margin-top: 54px;
-    width: 559px;
-    margin-left: -93px;
-    height: 481px;
+    width: 519px;
+    margin-left: -47px;
 }
 
 
@@ -277,6 +270,7 @@ added
     bottom: 0;
     width: 100%;
     text-align: center;
+    margin-top: 20px;
 }
 
 .footer-card {
@@ -288,7 +282,9 @@ added
 }
 
 .footer-card .card .logo-img img {
-    width: 85%;
+    width: 100%;
+    margin-top: 145px;
+    padding: 15px;
 }
 
 .footer-card .info-card {
@@ -298,14 +294,17 @@ added
     margin-bottom: 10px;
     box-shadow: 1px 1px 1px 1px #ddd;
     padding: 15px;
-    margin-top: 140px;
+    margin-top: 10px;
     border-radius: 27px;
 }
 
 .footer-card .info-card .tem-img img {
     border-radius: 50%;
     width: 100px;
+    height: 100px;
     float: right;
+    margin: 5px;
+    padding: 5px;
 }
 
 .footer-card .info-card .tem-name {
@@ -313,8 +312,7 @@ added
     font-weight: bold;
     font-size: 28px;
     margin-right: 23px;
-    /* text-align: center; */
-    margin-top: 30px;
+    margin: 15px;
     font-family: Hacen Promoter;
 }
 
@@ -386,7 +384,7 @@ added
 .card-our .card-body p {
     font-weight: bold;
     font-family: Cooper;
-    font-size: 19px;
+    font-size: 40px;
     color: #2C3E50;
 }
 
@@ -394,13 +392,15 @@ added
     position: relative;
     display: block;
     padding: 0.2rem 0.14rem;
-    background-color: #fff;
+    background-color: #fff0;
     border: 0px;
+    top: 20px;
+    margin-bottom: 39px;
 }
 
 .list-group-item .rectangle {
     height: 72px;
-    width: 214px;
+    width: 500px;
     background-color: #23C2CA;
     box-shadow: 2px 2px 2px 2px #ddd;
     border-radius: 38px 27px 27px 40px;
@@ -410,17 +410,21 @@ added
     border-radius: 50%;
     width: 50px;
     height: 54px;
-    margin-left: 159px;
+    float: right;
+    margin-right: 10px;
     margin-top: 8px;
 }
 
 .list-group-item .rectangle span {
-    margin-top: 22px;
+    margin-top: -21px;
     position: absolute;
-    margin-left: -157px;
+    margin-left: 91px;
     color: #000;
+    float: left;
     font-family: Cooper;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: Cooper;
+    font-size: 46px;
 }
 
 .list-group-item .triangle-left {
@@ -429,7 +433,7 @@ added
     border-top: 43px solid transparent;
     border-right: 111px solid #1BA5AC;
     border-bottom: 42px solid transparent;
-    margin-top: -79px;
+    margin-top: -51px;
     margin-left: -65px;
     border-radius: 46px;
 }
@@ -473,7 +477,7 @@ added
 
 .list-group-item .rectangle2 {
     height: 72px;
-    width: 214px;
+    width: 500px;
     background-color: #FCB606;
     box-shadow: 0px 0px 2px 2px #ddd;
     border-radius: 38px 27px 27px 40px;
@@ -484,18 +488,21 @@ added
     border-radius: 50%;
     width: 50px;
     height: 54px;
-    margin-left: 159px;
+    margin-left: 432px;
     margin-top: 8px;
     transform: rotate(180deg);
 }
 
 .list-group-item .rectangle2 span {
-    margin-top: 22px;
+    margin-top: -82px;
     position: absolute;
-    margin-left: -161px;
+    margin-left: 79px;
     color: #000;
+    /* font-family: auto; */
+    float: left;
+    font-weight: 400px !important;
     font-family: Cooper;
-    font-size: 15px;
+    font-size: 46px;
     transform: rotate(180deg);
 }
 
@@ -504,9 +511,8 @@ added
     height: 0;
     border-top: 43px solid transparent;
     border-right: 111px solid #E8A704;
-    ;
     border-bottom: 42px solid transparent;
-    margin-top: -69px;
+    margin-top: -113px;
     margin-left: -65px;
     border-radius: 46px;
 }
@@ -555,9 +561,6 @@ added
 
 /*start contact */
 
-
-/* silder our */
-
 .slider-contact img {
     width: 100%;
     height: 500px;
@@ -602,11 +605,19 @@ added
     margin-left: 36px;
 }
 
-.slider-contact .overlay .contact-icon .icons {
+.slider-contact .overlay .contact-icon li {
+    height: 50px;
+    width: 50px;
     background-color: #31859C;
     border-radius: 50%;
-    margin-left: 16px;
-    padding: 10px;
+    margin-left: 10px;
+}
+
+.slider-contact .overlay .contact-icon .icons {
+    position: absolute;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
 }
 
 .slider-contact .overlay .contact-icon .icons i {
@@ -780,6 +791,8 @@ added
     text-align: center;
     font-family: Cooper;
     font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 .courese-body {

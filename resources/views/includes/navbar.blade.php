@@ -11,19 +11,19 @@
                 <a class="nav-link" href="{{route('index')}}"><span class="{{ request()->routeIs('index') ? 'parallelogram-active':'parallelnavcolor' }}"></span><p class="txt">Home</p> </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="other page/our_service.html"><span class="parallelogram"></span> <p class="txt">Our Services</p></span></a>
+                <a class="nav-link" href="{{route('our.services')}}"><span class="{{ request()->routeIs('our.services') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">Our Services</p></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('programs')}}"><span class="{{ request()->routeIs('programs') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">programs</p></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="other page/courese.html"><span class="parallelogram"></span> <p class="txt">Courses</p></span></a>
+                <a class="nav-link" href="{{route('our.courses')}}"><span class="{{ request()->routeIs('our.courses') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">Courses</p></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('about')}}"><span class="{{ request()->routeIs('about') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">About</p></span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="other page/contact.html"><span class="parallelogram"></span> <p class="txt">Contact</p></span></a>
+                <a class="nav-link" href="{{route('contacts')}}"><span class="{{ request()->routeIs('contacts') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">Contact</p></span></a>
             </li>
 
         </ul>

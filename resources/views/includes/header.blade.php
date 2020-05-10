@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('layout/css/main.css')}}">
     <link rel="stylesheet" href="{{asset('layout/css/responsive.css')}}">
 
-    <!-- Styles -->
+    {{-- <!-- Styles -->
     <style>
         html, body {
             background-color: #fff;
@@ -65,7 +65,7 @@
         .m-b-md {
             margin-bottom: 30px;
         }
-    </style>
+    </style> --}}
 
 </head>
 

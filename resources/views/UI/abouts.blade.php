@@ -56,25 +56,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-md-6">
+                <div class="col-sm-6 col-lg-4 col-md-3">
                     <div class="card_img">
                         <div class="card">
                             <div class="card-body">
-
                                 <img src="../layout/image/4.png"> </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-4 col-md-6">
+                <div class="col-sm-6 col-lg-4 col-md-3">
                     <div class="card_img2">
                         <div class="card">
                             <div class="card-body">
                                 <img src="../layout/image/1.png" alt="">
+
                                 <div class="img2">
                                     <img src="../layout/image/3.png" alt="">
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -113,35 +113,63 @@
     <div class="footer">
         <div class="footer-card">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="card">
-                            <div class="logo-img">
-                                <img src="../layout/image/5.png" alt="">
-                            </div>
+                <div class="col-lg-6 col-sm-6 col-md-6 float-lg-left">
+                    <div class="card">
+                        <div class="logo-img">
+                            <img src="../layout/image/5.png" alt="">
                         </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="info-card">
-                            <div class="tem-img">
-                                <img src="../layout/image/halaa.png" alt="">
-
-                            </div>
-                            <div class="tem-name">
-                                حلا حازم
-                                <br>
-                                <span>
-                                مبرمجة 
-                            </span>
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
+                <div class="col-lg-6 col-sm-6 col-md-4 float-lg-right float-md-right">
+                    <div class="info-card">
+                        <div class="tem-img">
+                            <img src="../layout/image/halaa.png" alt="">
+                        </div>
+                        <div class="tem-name">
+                            حلا حازم
+                            <br>
+                            <span>
+                                مبرمجة 
+                            </span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="info-card">
+                        <div class="tem-img">
+                            <img src="../layout/image/amaal2.jpg" alt="">
+                        </div>
+                        <div class="tem-name">
+                            امال حسين
+                            <br>
+                            <span>
+                                مبرمجة 
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <div class="info-card">
+                        <div class="tem-img">
+                            <img src="../layout/image/ahmed2.jpeg" alt="">
+                        </div>
+                        <div class="tem-name">
+                            احمد ياسين
+                            <br>
+                            <span>
+                              مبرمج
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+
         </div>
     </div>
+
 
 <!--Footer-->
 @include('includes.footer')
