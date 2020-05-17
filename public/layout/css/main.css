@@ -43,7 +43,7 @@ body {
     margin-top: 23px;
 }
 
-.navbar-expand-lg .nav-item .nav-link .parallelogram {
+.navbar-expand-lg .nav-item .nav-link .parallelnavcolor {
     position: absolute;
     width: 100.95px;
     height: 44.08px;
@@ -51,16 +51,6 @@ body {
     transform: skew(20deg);
     background-color: #FFFFFF;
     box-shadow: 1px 1px 1px 1px #DDD;
-}
-
-.navbar-expand-lg .nav-item .nav-link .parallelnavcolor{
-    position: absolute;
-    width: 100.95px;
-    height: 44.08px;
-    transform: skew(20deg);
-    background-color: #fff;
-    box-shadow: 1px 1px 1px 1px #DDD;
-    margin-top: 23px;
 }
 
 .navbar-expand-lg .nav-item .txt {
@@ -795,15 +785,13 @@ body {
     margin-bottom: 50px;
 }
 
-.courese-body {
-    margin-bottom: 14%;
-}
-
 
 /*start  card data style */
 
 .courese-data {
     background-color: #5585ff75;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -811,6 +799,10 @@ body {
 
 .courese-Data-Science {
     background-color: #ff256875;
+}
+
+.courese-Data-Science p {
+    margin-top: -55px !important;
 }
 
 
@@ -823,6 +815,10 @@ body {
     background-color: #23C2CA;
 }
 
+.courese-Machine .title p {
+    margin-top: -57px !important;
+}
+
 
 /*end */
 
@@ -831,6 +827,10 @@ body {
 
 .courese-English {
     background-color: #fcb60680;
+}
+
+.courese-English .title p {
+    margin-top: -59px !important;
 }
 
 
@@ -843,6 +843,11 @@ body {
     background-color: #346a9080;
 }
 
+.courese-Arduino .title p {
+    margin-top: -57px !important;
+    margin-left: 158px !important;
+}
+
 
 /*end */
 
@@ -851,6 +856,10 @@ body {
 
 .courese-Internet {
     background-color: #ce118980;
+}
+
+.courese-Internet .title p {
+    margin-top: -56px !important;
 }
 
 
@@ -885,7 +894,7 @@ body {
 /*end */
 
 .courese-body .title img {
-    width: 43%;
+    width: 30%;
     margin-left: -22px;
     margin-top: -92px;
 }
@@ -922,4 +931,70 @@ body {
     margin-left: 0px;
     background-color: #2C3E50;
     margin-top: 5px;
+}
+
+
+/*start test style */
+
+.card-slider {
+    margin: 10% auto;
+}
+
+.card-slider .card-coureses .card-img-top {
+    width: 320px;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin-left: 19px;
+    background-color: #fff;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.card-slider .card-coureses {
+    box-shadow: 1px 1px 1px 1px #ddd;
+    border-radius: 12px;
+    margin-top: 23px;
+    background-color: #fff;
+    margin-bottom: 23px;
+}
+
+.card-slider .card-coureses .btn-warning {
+    border-radius: 0px 22px 0px 14px;
+    margin-left: 0px;
+    background-color: #2C3E50;
+    margin-top: 12px;
+    height: 48px;
+    color: #fff;
+    font-size: 20px;
+    border-color: #2C3E50;
+}
+
+
+/*================================================================================*/
+
+
+/*start video */
+
+.video .card {
+    width: 650px;
+    margin: 5% auto;
+    box-shadow: 1px 1px 1px 1px #ddd;
+}
+
+.video .card .card-footer {
+    color: #fff;
+    font-size: 20px;
+    background-color: #2C3E50;
+    font-family: Ebrima;
+}
+
+.video .card .card-footer .next-video a {
+    color: #fff;
+    text-decoration: none;
+    float: right;
+    margin-top: -31px;
+}
+
+.video iframe {
+    width: 600px;
+    height: 300px;
 }

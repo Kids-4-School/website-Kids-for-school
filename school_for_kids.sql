@@ -7,23 +7,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `profile_id` bigint(20) unsigned DEFAULT NULL,
-  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`),
-  KEY `users_profile_id_foreign` (`profile_id`),
-  CONSTRAINT `users_profile_id_foreign` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 DROP TABLE IF EXISTS `failed_jobs`;
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -53,7 +36,7 @@ CREATE TABLE `lessons` (
   KEY `lessons_user_id_foreign` (`user_id`),
   CONSTRAINT `lessons_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `lessons_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE `migrations` (
@@ -137,20 +120,22 @@ CREATE TABLE `services` (
   CONSTRAINT `services_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$wiVMyOSAUtdI6rxFvHxUY.t9VVhlxj7INn9PKsNjSebfaQnUgmA/G', NULL, NULL, '2020-04-13 11:06:41', '2020-04-13 11:06:41');
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'editor', 'editor@gmail.com', NULL, '$2y$10$4PsttR8zq9p6.gYvXnoxNOs8YkpEfB1t1DtxhfhDkO6VY3DGQh.hy', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42');
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(3, 'creator', 'creator@gmail.com', NULL, '$2y$10$.55l3NOi4s5pk/lwijfx3OKxSueI2yUci9x4h3DNQH7SzDfOi4CUS', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42');
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(4, 'user', 'user@gmail.com', NULL, '$2y$10$IldbyXdY20qM0wZTZE/DAedE/TCuAPFXbLOG3Xjzf2d8fiH/d3eSq', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42'),
-(5, 'khalid', 'khalid@gmail.com', NULL, '$2y$10$oy9LTN5J/N4tTza0mLufvOaA7xd/2uXyF.kL1y1JnxAFL6OD.Jciu', 9, NULL, '2020-04-13 11:10:31', '2020-04-23 16:47:23'),
-(6, 'Ali', 'ali@gmail.com', NULL, '$2y$10$r8LyFAjKRhXxaLiqhwTVWOA1gOZ1npi3oKObt23N3RFuvQUyhMd5.', 11, NULL, '2020-04-13 12:22:47', '2020-04-24 21:34:01'),
-(9, 'tareq', 'tareq@gmail.com', NULL, '$2y$10$G7BqXrsD3F9JLK2ujeGcc.MqLVNl4BixsNZWqO/F9Hrkm6L0jIRm.', 10, NULL, '2020-04-24 14:04:25', '2020-04-24 14:07:10'),
-(10, 'Kareem', 'kareem@gmail.com', NULL, '$2y$10$EI1oQnGlTtq7adkv6orvSu4D61jrI7UDTJ57uHV/RkgGUDlHKQqxu', 13, NULL, '2020-04-26 20:24:59', '2020-04-30 22:11:01'),
-(11, 'Jasem', 'jasem@gmail.com', NULL, '$2y$10$yF14YHllRYg5AyEBk90PHezvf2d8mJhNiC9Y2DnLhW7Wtske5HiIe', NULL, 'c0lcwJpBjt1t5ZHFuPhLmxAS2GMmW5RxLz1TEOgLjmrf5dxAkN3hhuXZFiTI', '2020-05-04 17:49:00', '2020-05-04 18:00:00'),
-(12, 'Usama', 'skx39651@bcaoo.com', '2020-05-04 23:08:28', '$2y$10$nWqnW0FjSwQB/D/WtkyB/um.Asyl0.CPJZ5ADMZJeO8i13JYOuzhq', NULL, NULL, '2020-05-04 23:05:51', '2020-05-04 23:08:28');
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `profile_id` bigint(20) unsigned DEFAULT NULL,
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`),
+  KEY `users_profile_id_foreign` (`profile_id`),
+  CONSTRAINT `users_profile_id_foreign` FOREIGN KEY (`profile_id`) REFERENCES `profiles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 
@@ -168,7 +153,14 @@ INSERT INTO `lessons` (`id`, `service_id`, `title`, `subtitle`, `video_link`, `d
 (12, 13, 'Gravit designer UI : UX', 'Gravit designer UI,UX', 'https://youtu.be/7F6T9357Sgw', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '67thmEhxoaTZNknggfDz18irXQJNa29updoRa8KY.jpeg', 6, '2020-05-10 17:28:39', '2020-05-10 17:28:39'),
 (13, 12, 'Python Data Science', 'Data Science install Anaconda Distribution on windows', 'https://youtu.be/vnAJnqxwf88', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'eeHDQSBOrA4PaRO9jKq4Uw8hniZOcmPz6A5CSVDr.jpeg', 10, '2020-05-10 18:32:08', '2020-05-10 18:32:08'),
 (14, 12, 'Python Data Science', 'Data Science Numpy & ND array', 'https://youtu.be/udWUMpyopM0', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'hcnda3tPTThtXf3lVmbagUZXUVia6868A99FGZEL.jpeg', 10, '2020-05-10 18:33:22', '2020-05-10 18:33:22'),
-(15, 12, 'Data Science NumPy', 'Data Science NumPy Functions Ceil', 'https://youtu.be/yU5T8_UFeAo', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'JxJqjstpNVFaYOYIC2pzICS9VxomGbzKjP79taOe.jpeg', 10, '2020-05-10 18:35:05', '2020-05-10 18:35:05');
+(15, 12, 'Data Science NumPy', 'Data Science NumPy Functions Ceil', 'https://youtu.be/yU5T8_UFeAo', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'JxJqjstpNVFaYOYIC2pzICS9VxomGbzKjP79taOe.jpeg', 10, '2020-05-10 18:35:05', '2020-05-10 18:35:05'),
+(16, 12, 'Data Science Tutorials', 'Data Science Tutorials', 'https://youtu.be/hS37_tloJIk', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'wZRW5uWAuZWicMxLhrcxtyCgl1y06bm2IprMD3wK.jpeg', 10, '2020-05-16 22:38:11', '2020-05-16 22:38:11'),
+(17, 12, 'Data Science', 'Data Science Tutorials', 'https://youtu.be/Aq_i0mLjiC8', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'ueDPjMs3VoGrL1KO4ykAF9BosKukzovnpkiQupuY.jpeg', 10, '2020-05-16 22:39:12', '2020-05-16 22:39:12'),
+(18, 12, 'Data Science', 'Data Science Tutorials', 'https://youtu.be/plL3XelyMB4', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'bU8wVnXUouFS4lE1zpBgraB4bHDqlWZTqTo9N5MT.png', 10, '2020-05-16 22:41:26', '2020-05-16 22:41:26'),
+(19, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/g5wwsS8eGBM', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'KwHLaobbOWzpZI5wI9GfbFR58aPU5bCJ0n89CPU3.jpeg', 10, '2020-05-16 22:42:59', '2020-05-16 22:42:59'),
+(20, 13, 'Graphic Design 2', 'Graphic Design Tutorials', 'https://youtu.be/_JX6KqqpgVI', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'VSvEwpWEfuMltTYIQOytR6oMUoAbm82YwvAZCtGa.jpeg', 10, '2020-05-16 22:44:19', '2020-05-16 22:44:19'),
+(21, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/GaDSEieQHGQ', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'lidtQ6Y91VFRSLRJ2lSESTYaMLvHlmMgADXzMfih.jpeg', 10, '2020-05-16 22:46:23', '2020-05-16 22:46:23'),
+(22, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/mM0OCZa7VRA', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'UcphhJMa28TRqqXSypoHbDuPNvNSq3tRHC25m0A3.jpeg', 10, '2020-05-16 22:48:34', '2020-05-16 22:48:34');
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1);
@@ -252,6 +244,21 @@ INSERT INTO `services` (`id`, `title`, `image`, `description`, `user_id`, `creat
 (13, 'Graphic Design', 'p0UE3Th8TCiQb9XImVkMc2Z6FfY5loy5sHzyenvv.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 10, '2020-04-27 14:15:23', '2020-04-27 14:15:23'),
 (14, 'Usama_Services', 'cQrnUilRPQ3OHUd4K22W9R6Hq74EBdI6uGNbI0kA.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 12, '2020-05-08 19:18:55', '2020-05-08 19:18:55'),
 (15, 'New Kareem Service', 'gg9pqUIxJRzlVy44AUhscJVXL0Kvxrs6o1D0suj5.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 10, '2020-05-08 23:03:06', '2020-05-08 23:03:06');
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$wiVMyOSAUtdI6rxFvHxUY.t9VVhlxj7INn9PKsNjSebfaQnUgmA/G', NULL, NULL, '2020-04-13 11:06:41', '2020-04-13 11:06:41');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(2, 'editor', 'editor@gmail.com', NULL, '$2y$10$4PsttR8zq9p6.gYvXnoxNOs8YkpEfB1t1DtxhfhDkO6VY3DGQh.hy', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(3, 'creator', 'creator@gmail.com', NULL, '$2y$10$.55l3NOi4s5pk/lwijfx3OKxSueI2yUci9x4h3DNQH7SzDfOi4CUS', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
+(4, 'user', 'user@gmail.com', NULL, '$2y$10$IldbyXdY20qM0wZTZE/DAedE/TCuAPFXbLOG3Xjzf2d8fiH/d3eSq', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42'),
+(5, 'khalid', 'khalid@gmail.com', NULL, '$2y$10$oy9LTN5J/N4tTza0mLufvOaA7xd/2uXyF.kL1y1JnxAFL6OD.Jciu', 9, NULL, '2020-04-13 11:10:31', '2020-04-23 16:47:23'),
+(6, 'Ali', 'ali@gmail.com', NULL, '$2y$10$r8LyFAjKRhXxaLiqhwTVWOA1gOZ1npi3oKObt23N3RFuvQUyhMd5.', 11, NULL, '2020-04-13 12:22:47', '2020-04-24 21:34:01'),
+(9, 'tareq', 'tareq@gmail.com', NULL, '$2y$10$G7BqXrsD3F9JLK2ujeGcc.MqLVNl4BixsNZWqO/F9Hrkm6L0jIRm.', 10, NULL, '2020-04-24 14:04:25', '2020-04-24 14:07:10'),
+(10, 'Kareem', 'kareem@gmail.com', NULL, '$2y$10$EI1oQnGlTtq7adkv6orvSu4D61jrI7UDTJ57uHV/RkgGUDlHKQqxu', 13, NULL, '2020-04-26 20:24:59', '2020-04-30 22:11:01'),
+(11, 'Jasem', 'jasem@gmail.com', NULL, '$2y$10$yF14YHllRYg5AyEBk90PHezvf2d8mJhNiC9Y2DnLhW7Wtske5HiIe', NULL, 'c0lcwJpBjt1t5ZHFuPhLmxAS2GMmW5RxLz1TEOgLjmrf5dxAkN3hhuXZFiTI', '2020-05-04 17:49:00', '2020-05-04 18:00:00'),
+(12, 'Usama', 'skx39651@bcaoo.com', '2020-05-04 23:08:28', '$2y$10$nWqnW0FjSwQB/D/WtkyB/um.Asyl0.CPJZ5ADMZJeO8i13JYOuzhq', NULL, NULL, '2020-05-04 23:05:51', '2020-05-04 23:08:28');
 
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

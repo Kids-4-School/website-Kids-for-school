@@ -17,8 +17,12 @@ class UIController extends Controller
     //Services
     public function services()
     {
+        // Get Random color of two colors
+        $background_colors = array('#FCB606', '#23C2CA');
+        $color = $background_colors[array_rand($background_colors)];
+
         $services = Service::latest()->get();
-        return view('UI.our_services')->with('services',$services);
+        return view('UI.our_services')->with(['services'=>$services,'color'=>$color]);
     }
 
     //Programs
@@ -31,8 +35,12 @@ class UIController extends Controller
     //Courses
     public function courses()
     {
-        $services = Service::with('lessons')->latest()->get();
-        return view('UI.courses', ['services' => $services]);
+        // $services = Service::with('lessons')->latest()->get();
+        // return view('UI.courses', ['services' => $services]);
+
+        $lessons = Lesson::latest()->paginate(3);
+        $services = Service::latest()->get();
+        return view('UI.courses', ['services' => $services , 'lessons' => $lessons]);
     }
 
     //About

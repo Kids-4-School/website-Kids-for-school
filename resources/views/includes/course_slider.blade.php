@@ -1,6 +1,6 @@
-<!--start silder  -->
+  <!--start silder  -->
 
-<div class="slider slider-courese">
+  <div class="slider slider-courese">
     <div id="main-slider" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item carousel-one active">

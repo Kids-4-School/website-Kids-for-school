@@ -9,10 +9,10 @@
             @foreach ($services as $service)
                 <!--start list pin-->
                     <div class="list-group-item">
-                        <div class="rectangle2">
+                        <div class="rectangle2" style="background-color:{{$color}};">
                             <img src="{{$service->image_path}}" alt="">
-                            <a href="/" class="list-group-item"> <span>{{$service->title}}</span> </a>
-                            <div class="triangle-left2"></div>
+                            <a href="{{route('our.courses')}}" class="list-group-item"> <span>{{$service->title}}</span> </a>
+                            <div class="triangle-left2" style="border-right-color:{{$color}};"></div>
                             <div class="flag2">
                                 <p>{{$service->id}}</p>
                             </div>

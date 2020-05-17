@@ -18,6 +18,7 @@
     <!--Course Cards/-->
 
 
+
 <!--Footer-->
 @include('includes.footer')
 <!--Footer/-->

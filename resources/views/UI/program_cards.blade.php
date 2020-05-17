@@ -13,7 +13,7 @@
                     </div>
 
                     <div class="card-footer">
-                        <button type="button" class="btn btn-primary">{{$service->title}}</button>
+                        <a href="{{route('our.courses')}}" type="button" class="btn btn-primary">{{$service->title}}</a>
                     </div>
                 </div>
             </div>
