@@ -43,6 +43,13 @@ class UIController extends Controller
         return view('UI.courses', ['services' => $services , 'lessons' => $lessons]);
     }
 
+    //Show Lesson
+    public function showLesson($id)
+    {
+        $lesson = Lesson::find($id);
+        return view('UI.lesson')->with('lesson',$lesson);
+    }
+
     //About
     public function abouts()
     {
