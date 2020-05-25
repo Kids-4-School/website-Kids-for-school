@@ -36,7 +36,7 @@ CREATE TABLE `lessons` (
   KEY `lessons_user_id_foreign` (`user_id`),
   CONSTRAINT `lessons_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `lessons_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `migrations`;
 CREATE TABLE `migrations` (
@@ -160,7 +160,9 @@ INSERT INTO `lessons` (`id`, `service_id`, `title`, `subtitle`, `video_link`, `d
 (19, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/g5wwsS8eGBM', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'KwHLaobbOWzpZI5wI9GfbFR58aPU5bCJ0n89CPU3.jpeg', 10, '2020-05-16 22:42:59', '2020-05-16 22:42:59'),
 (20, 13, 'Graphic Design 2', 'Graphic Design Tutorials', 'https://youtu.be/_JX6KqqpgVI', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'VSvEwpWEfuMltTYIQOytR6oMUoAbm82YwvAZCtGa.jpeg', 10, '2020-05-16 22:44:19', '2020-05-16 22:44:19'),
 (21, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/GaDSEieQHGQ', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'lidtQ6Y91VFRSLRJ2lSESTYaMLvHlmMgADXzMfih.jpeg', 10, '2020-05-16 22:46:23', '2020-05-16 22:46:23'),
-(22, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/mM0OCZa7VRA', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'UcphhJMa28TRqqXSypoHbDuPNvNSq3tRHC25m0A3.jpeg', 10, '2020-05-16 22:48:34', '2020-05-16 22:48:34');
+(22, 13, 'Graphic Design', 'Graphic Design Tutorials', 'https://youtu.be/mM0OCZa7VRA', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'UcphhJMa28TRqqXSypoHbDuPNvNSq3tRHC25m0A3.jpeg', 10, '2020-05-16 22:48:34', '2020-05-16 22:48:34'),
+(23, 14, 'Laravel', 'What is Laravel', 'https://youtu.be/1onmPIe07yo', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'UKNEyr5MQzghsVr0AoZskiwqyzeeDABaMO7vmhCT.jpeg', 10, '2020-05-24 21:10:01', '2020-05-24 21:10:01'),
+(24, 10, 'Deno', 'What is Deno', 'https://youtu.be/3Vl8a3zYjiw', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '3Fl8RhaEA3ANg0hNgKCgYr39XONbn7VE4wlcF2ZE.jpeg', 10, '2020-05-24 21:20:51', '2020-05-24 21:20:51');
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1);

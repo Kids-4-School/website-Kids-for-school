@@ -1,96 +1,35 @@
 <!--Courses Cards-->
 
-{{-- <div class="card-slider">
-    <div class="container">
-        @foreach ($services as $service)
-            @if ($service->lessons->count() > 0)
-                <div class="row" style="margin-top:100px;">
-                    <div class="col-sm-12 courese-sec courese-body">
-                        <div class="title">
-                            <img src="../layout/image/99.png" alt="">
-                            <p>{{$service->title}}</p>
-                        </div>
-        
-                        <div class="container">
-                            <div class="row courese">
-                                <!--start card-->
-                                @foreach ($service->lessons->take(3) as $lesson)
-                                    <div class="col-sm-12 col-lg-4 col-md-4">
-                                        <div class="card card-coureses">
-                                            <img src="{{$lesson->image_path}}" class="card-img-top">
-                                            <a type="button" class="btn btn-warning btn-block" href="viwe.html">{{$lesson->title}}</a>
-                                        </div>
-                                    </div>
-                                @endforeach
-                                <!--end card-->
-                            </div>
+<!--start title -->
+<div class="title-courese text-center">
+    <H1>Courses</H1>
+</div>
+<!--end title-->
 
-                            <!--Pagination-->
-
-                            
-                        </div>
-        
-                    </div>
-                    <!--end row-->
-                </div>
-            @endif
-        @endforeach
-    </div>
-</div> --}}
-
-<!--Courses Cards/-->
-
-
-
-
-
-<!--Courses Cards-->
-
+<!--Courses-->
 <div class="card-slider">
     <div class="container">
-        @foreach ($services as $service)
-            @if ($service->lessons->count() > 0)
-                <div class="row" style="margin-top:100px;">
-                    <div class="col-sm-12 courese-sec courese-body">
-                        <div class="title">
-                            <img src="../layout/image/99.png" alt="">
-                            <p>{{$service->title}}</p>
+        <div class="row">
+            
+            @foreach ($services as $service)
+                @if ($service->lessons->count() > 0)
+                    <!--start card-->
+                    <div class="col-sm-12 col-lg-4 col-md-4">
+                        <div class="card card-coureses">
+                            <img src="{{$service->image_path}}" class="card-img-top">
+                            <a type="button" class="btn btn-warning btn-block" href="{{route('all.lessons.users',['id'=>$service->id ,'slug'=>$service->title])}}">{{$service->title}}</a>
                         </div>
-        
-                        <div class="container">
-                            <div class="row courese">
-                                <!--start card-->
-                                @foreach ($lessons as $lesson)
-                                    @if ($service->id == $lesson->service_id)
-                                        <div class="col-sm-12 col-lg-4 col-md-4">
-                                            <div class="card card-coureses">
-                                                <img src="{{$lesson->image_path}}" class="card-img-top">
-                                                <a type="button" class="btn btn-warning btn-block" href="{{$lesson->path()}}">{{$lesson->title}}</a>
-                                            </div>
-                                        </div>
-                                    @endif
-                                @endforeach
-
-                                <!--end card-->
-
-                                
-                            </div>
-
-                            <!--Pagination-->
-                            {{$lessons->links()}}
-                            <!--Pagination/-->
-                            
-                        </div>
-        
                     </div>
-                    <!--end row-->
-                </div>
-            @endif
-        @endforeach
+                    <!--end card-->
+                @endif
+            @endforeach
+            
+        </div>
+
     </div>
 </div>
 
-<!--Courses Cards/-->
+<!--Courses/-->
 
 
 

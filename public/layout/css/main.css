@@ -774,124 +774,11 @@ body {
     margin-left: 12px;
 }
 
-
-/*start card courese */
-
-.coureses-title {
-    text-align: center;
+.title-courese h1 {
+    font-size: 64px;
     font-family: Cooper;
     font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 50px;
 }
-
-
-/*start  card data style */
-
-.courese-data {
-    background-color: #5585ff75;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-/*start courese-Data-Science */
-
-.courese-Data-Science {
-    background-color: #ff256875;
-}
-
-.courese-Data-Science p {
-    margin-top: -55px !important;
-}
-
-
-/*end */
-
-
-/*start courese-Machine */
-
-.courese-Machine {
-    background-color: #23C2CA;
-}
-
-.courese-Machine .title p {
-    margin-top: -57px !important;
-}
-
-
-/*end */
-
-
-/*start courese-English */
-
-.courese-English {
-    background-color: #fcb60680;
-}
-
-.courese-English .title p {
-    margin-top: -59px !important;
-}
-
-
-/*end */
-
-
-/*start courese-Arduino*/
-
-.courese-Arduino {
-    background-color: #346a9080;
-}
-
-.courese-Arduino .title p {
-    margin-top: -57px !important;
-    margin-left: 158px !important;
-}
-
-
-/*end */
-
-
-/*start courese-Internet*/
-
-.courese-Internet {
-    background-color: #ce118980;
-}
-
-.courese-Internet .title p {
-    margin-top: -56px !important;
-}
-
-
-/*end */
-
-
-/*start card courese-sec */
-
-.courese-sec {
-    background-color: #fcb60680;
-}
-
-.courese-sec .title p {
-    margin-top: -55px !important;
-}
-
-
-/* end */
-
-
-/*start courese-Embedded card */
-
-.courese-Embedded {
-    background-color: #01457475;
-}
-
-.courese-Embedded .title p {
-    margin-top: -55px !important;
-}
-
-
-/*end */
 
 .courese-body .title img {
     width: 30%;
@@ -937,7 +824,7 @@ body {
 /*start test style */
 
 .card-slider {
-    margin: 10% auto;
+    margin: 0% auto;
 }
 
 .card-slider .card-coureses .card-img-top {

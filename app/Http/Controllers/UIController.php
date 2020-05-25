@@ -43,6 +43,13 @@ class UIController extends Controller
         return view('UI.courses', ['services' => $services , 'lessons' => $lessons]);
     }
 
+    //Lessons
+    public function allLessons(Service $id)
+    {
+        $lessons = $id->lessons()->latest()->paginate(6);
+        return view('UI.all_lessons',compact('lessons'));
+    }
+
     //Show Lesson
     public function showLesson($id)
     {
