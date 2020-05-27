@@ -14,7 +14,7 @@
                             <a href="{{route('our.courses')}}" class="list-group-item"> <span>{{$service->title}}</span> </a>
                             <div class="triangle-left2" style="border-right-color:{{$color}};"></div>
                             <div class="flag2">
-                                <p>{{$service->id}}</p>
+                                <p>→</p>
                             </div>
                         </div>
                     </div>

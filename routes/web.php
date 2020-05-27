@@ -74,8 +74,6 @@ Route::get('/courses','UIController@courses')->name('our.courses');
 Route::get('/lesson/{id}-{slug}','UIController@showLesson')->name('our.lesson');
 Route::get('/about','UIController@abouts')->name('about');
 Route::get('/contact','UIController@contacts')->name('contacts');
-
-//All Lessons
 Route::get('/all-lessons/{id}-{slug}','UIController@allLessons')->name('all.lessons.users');
 
 

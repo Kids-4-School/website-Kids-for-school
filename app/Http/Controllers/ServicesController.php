@@ -23,7 +23,7 @@ class ServicesController extends Controller
      */
     public function index()
     {
-        $services = Service::where('user_id','=',Auth::user()->id)->paginate(6);
+        $services = Service::where('user_id','=',Auth::user()->id)->latest()->paginate(6);
         if(count($services) > 0)
         {
             return view('services.index_service')->with('services',$services);
@@ -38,7 +38,7 @@ class ServicesController extends Controller
     // Manage Services for Amdin 
     public function manageServices()
     {
-        $services = Service::paginate(6);
+        $services = Service::latest()->paginate(6);
         return view('services.manage_services')->with('services',$services);
     }
 
@@ -64,9 +64,9 @@ class ServicesController extends Controller
     {
         // Validation
         $request->validate([
-            'title' => ['required','string','max:200'],
+            'title' => 'required|string|max:200',
             'image' => 'required|image|mimes:jpeg,jpg,png',
-            'description' => ['required','string'],
+            'description' => 'required|string',
         ],[],[
 
             'title' => 'Title ',
@@ -140,9 +140,9 @@ class ServicesController extends Controller
 
         // Validation
         $request->validate([
-            'title' => ['string','max:200'],
+            'title' => 'string|max:200',
             'image' => 'image|mimes:jpeg,jpg,png',
-            'description' => ['string'],
+            'description' => 'string',
         ],[],[
 
             'title' => 'Title ',

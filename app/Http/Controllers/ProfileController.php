@@ -20,7 +20,7 @@ class ProfileController extends Controller
     //Manage Profiles for Admin
     public function manageProfiles()
     {
-        $profiles = Profile::paginate(6);
+        $profiles = Profile::latest()->paginate(6);
         $users = User::all();
         return view('profiles.manage_profiles')->with('profiles',$profiles)->with('users',$users);
     }

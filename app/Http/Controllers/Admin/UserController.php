@@ -19,14 +19,14 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::paginate(6);
+        $users = User::latest()->paginate(6);
         $profiles = Profile::all();
         return view('admin.users.index')->with('users',$users)->with('profiles',$profiles);
     }
 
     public function viewUsers()
     {
-        $users = User::paginate(6);
+        $users = User::latest()->paginate(6);
         return view('admin.users.show')->with('users',$users);
     }
 

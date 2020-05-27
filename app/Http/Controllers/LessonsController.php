@@ -20,7 +20,7 @@ class LessonsController extends Controller
     // Manage courses for Admin 
     public function manageLessons()
     {
-        $lessons = Lesson::paginate(6);
+        $lessons = Lesson::latest()->paginate(6);
         return view('lessons.manage_lessons')->with('lessons',$lessons);
     }
 
@@ -33,7 +33,7 @@ class LessonsController extends Controller
      */
     public function index()
     {
-        $lessons = Lesson::where('user_id','=',Auth::user()->id)->paginate(6);
+        $lessons = Lesson::where('user_id','=',Auth::user()->id)->latest()->paginate(6);
         if(count($lessons) > 0)
         {
             return view('lessons.index_lessons')->with('lessons',$lessons);
@@ -179,7 +179,7 @@ class LessonsController extends Controller
     {
         // Validation
         $request->validate([
-            'search' => ['required','string','min:4','max:200']
+            'search' => 'required|string|min:4|max:200'
         ],[],[
             'search' => 'Title '
         ]);
