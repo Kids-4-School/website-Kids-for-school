@@ -183,7 +183,7 @@
             modal.find('.modal-title').text('Service');
             
             modal.find('.modal-body #service_id').html(service_id);
-            modal.find('.modal-body #image').attr('src','uploads/service/'+image);
+            modal.find('.modal-body #image').attr('src','/uploads/service/'+image);
             modal.find('.modal-body #title').html(title);
             modal.find('.modal-body #description').html(description);
 

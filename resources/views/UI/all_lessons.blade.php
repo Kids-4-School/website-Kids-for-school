@@ -34,7 +34,7 @@
             @foreach ($lessons as $lesson)
                 <div class="col-sm-12 col-lg-4 col-md-4">
                     <div class="card card-coureses">
-                        <img src="{{$lesson->image_path}}" class="card-img-top">
+                        <img src="{{$lesson->image_path}}" class="card-img-top" width="400" height="200">
                         <a type="button" class="btn btn-warning btn-block" href="{{$lesson->path()}}">{{$lesson->title}}</a>
                     </div>
                 </div>
