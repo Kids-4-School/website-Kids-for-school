@@ -179,6 +179,7 @@ return [
         App\Providers\BladeExtrasServiceProvider::class,
         RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class,
         
 
     ],

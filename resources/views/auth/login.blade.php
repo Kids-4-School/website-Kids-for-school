@@ -10,7 +10,7 @@
 
                     <h4 class="register_header text-center">Login</h4>
 
-                    <form class="mt-4" method="POST" action="{{ route('login') }}">
+                    <form class="mt-4" id="recaptcha" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row justify-content-center">
@@ -51,8 +51,23 @@
                             </div>
                         </div>
 
+
+                        <!--Recaptcha-->
+                            <div class="form-group row justify-content-center">
+                                <div class="g-recaptcha" data-sitekey="{{env('CAPTCHA_KEY')}}"></div>
+                                @if ($errors->has('g-recaptcha-response'))
+                                    <span class="invalid-feedback" style="display:block;">
+                                        <strong>{{$errors->first('g-recaptcha-response')}}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        <!--Recaptcha/-->
+
+
+
                         <div class="form-group row justify-content-center">
                             <div class="col-md-8 text-center">
+
                                 <button class="col-md-8 btn btn-primary btn-green" type="submit" >
                                     {{ __('Login') }}
                                 </button>
@@ -66,6 +81,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
