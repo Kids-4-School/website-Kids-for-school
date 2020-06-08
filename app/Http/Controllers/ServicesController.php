@@ -76,7 +76,7 @@ class ServicesController extends Controller
         ]);
 
         if($request->image){
-            Image::make($request->image)->save('uploads/service/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/service/'. $request->image->hashName());
         }
 
 
@@ -152,7 +152,7 @@ class ServicesController extends Controller
         ]);
 
         if($request->image){
-            Image::make($request->image)->save('uploads/service/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/service/'. $request->image->hashName());
         }
 
         $service->title = $request->title;

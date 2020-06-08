@@ -84,7 +84,7 @@ class LessonsController extends Controller
 
         //Check for Lesson Image Upload 
         if($request->image){
-            Image::make($request->image)->save('uploads/lesson/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/lesson/'. $request->image->hashName());
         }
 
         auth()->user()->lessons()->create([
@@ -159,7 +159,7 @@ class LessonsController extends Controller
 
         //Check for Lesson Image Upload 
         if($request->image){
-            Image::make($request->image)->save('uploads/lesson/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/lesson/'. $request->image->hashName());
         }
 
         $lesson->service_id = $request->service_id;

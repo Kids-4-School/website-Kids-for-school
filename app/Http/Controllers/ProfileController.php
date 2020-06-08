@@ -89,7 +89,7 @@ class ProfileController extends Controller
         ]);
 
         if($request->image){
-            Image::make($request->image)->save('uploads/profile/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/profile/'. $request->image->hashName());
         }
 
         $profile = Profile::create([
@@ -180,7 +180,7 @@ class ProfileController extends Controller
 
         //Check for Profile Image Upload 
         if($request->image){
-            Image::make($request->image)->save('uploads/profile/'. $request->image->hashName());
+            Image::make($request->image)->fit(400,400)->save('uploads/profile/'. $request->image->hashName());
         }
 
         $profile->phone_number = $request->phone_number;
