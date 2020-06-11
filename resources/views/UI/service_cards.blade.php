@@ -5,22 +5,28 @@
             <div class="card-body text-center">
                 <p> Our Services</p>
             </div>
-            
-            @foreach ($services as $service)
-                <!--start list pin-->
-                    <div class="list-group-item">
-                        <div class="rectangle2" style="background-color:{{$color}};">
-                            <img src="{{$service->image_path}}" alt="">
-                            <a href="{{route('our.courses')}}" class="list-group-item"> <span>{{$service->title}}</span> </a>
-                            <div class="triangle-left2" style="border-right-color:{{$color}};"></div>
-                            <div class="flag2">
-                                <p>→</p>
-                            </div>
-                        </div>
-                    </div>
-                <!--end list pin-->
-            @endforeach
 
+            <!--Services-->
+            <div class="card-slider">
+                <div class="container">
+                    <div class="row">
+                        
+                        @foreach ($services as $service)
+                            <!--start card-->
+                            <div class="col-sm-12 col-lg-4 col-md-4">
+                                <div class="card card-coureses">
+                                    <img src="{{$service->image_path}}" class="card-img-top" width="400" height="200">
+                                    <a type="button" class="btn btn-warning btn-block" href="{{route('our.courses')}}">{{$service->title}}</a>
+                                </div>
+                            </div>
+                            <!--end card-->
+                        @endforeach
+                        
+                    </div>
+
+                </div>
+            </div>
+            <!--Services/-->
 
         </div>
     </div>
