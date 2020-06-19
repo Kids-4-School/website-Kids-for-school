@@ -59,7 +59,7 @@
                         </div>
                         <div class="inf text-lg-left">
                             <img src="../layout/image/whats.png" alt="">
-                            <a> 07801860780</a>
+                            <a> 07800000000</a>
                         </div>
                         <div class="inf text-lg-left">
                             <img src="../layout/image/instag.png" alt="">
