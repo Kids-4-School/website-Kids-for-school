@@ -11,7 +11,7 @@
                 <a class="nav-link" href="{{route('index')}}"><span class="{{ request()->routeIs('index') ? 'parallelogram-active':'parallelnavcolor' }}"></span><p class="txt">Home</p> </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('our.services')}}"><span class="{{ request()->routeIs('our.services') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">Our Services</p></span></a>
+                <a class="nav-link" href="{{route('our.services')}}"><span class="{{ request()->routeIs('our.services') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt" style="font-size: small;">Our Services</p></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('programs')}}"><span class="{{ request()->routeIs('programs') ? 'parallelogram-active':'parallelnavcolor' }}"></span> <p class="txt">programs</p></span></a>

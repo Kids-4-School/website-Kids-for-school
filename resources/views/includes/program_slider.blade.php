@@ -7,11 +7,11 @@
             <div class="col-lg-1"></div>
             <div class="col-md-6 col-lg-6 col-sm-6">
                 <div class="overlay justify-content-sm-center">
-                    <span class="title">
+                    <span class="title align-content-center">
                         BEST PROGRAMS  
                        
                 <br>
-              <center> FOR YOUR KIDS ONLINE</center>  
+            FOR YOUR KIDS ONLINE
          </span>
                     <p class="txt-overlay">
                         LEARNING IS FUN FOR YOUR KIDS

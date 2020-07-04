@@ -1,10 +1,7 @@
 <!-- start card our service -->
-<div class="container">
-    <div class="row">
-        <div class="card card-our">
-            <div class="card-body text-center">
-                <p> Our Services</p>
-            </div>
+<div class="title-courese text-center">
+    <H1>Our Services</H1>
+</div>
 
             <!--Services-->
             <div class="card-slider">
