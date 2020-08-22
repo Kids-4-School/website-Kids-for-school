@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-sm-6 col-md-6 float-lg-right float-md-right">
-                    <img src="../layout/image/2.png" alt="">
+                    <img src="../layout/image/r.webp" alt="">
                 </div>
             </div>
             <div class="carousel-item carousel-two">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-sm-6 col-md-6 float-lg-left float-md-left">
-                    <img src="../layout/image/44.png" alt="">
+                    <img src="../layout/image/s.webp" alt="">
                 </div>
 
             </div>
@@ -52,7 +52,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8 col-sm-6 col-md-6 float-lg-left float-md-left">
-                    <img src="../layout/image/eng.png" alt="">
+                    <img src="../layout/image/t.webp" alt="">
                 </div>
 
             </div>

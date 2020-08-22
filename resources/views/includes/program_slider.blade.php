@@ -21,7 +21,7 @@
             </div>
 
 
-            <img src="{{asset('layout/image/ccc.png')}}" alt="">
+            <img src="{{asset('layout/image/u.webp')}}" alt="">
         </div>
 
     </div>

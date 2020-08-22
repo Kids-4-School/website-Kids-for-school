@@ -26,22 +26,59 @@
                     </div>
                 </div>
 
-                <img src="../layout/image/Image -1.png" alt="">
+                <img src="../layout/image/y.webp" alt="">
             </div>
 
         </div>
     </div>
     <!--end silder-->
+
     <!--start card-->
     <div class="card_about">
         <div class="container">
             <div class="row">
-
-                <div class="col-sm-6 col-lg-3 col-md-6">
-                    <div class="card_info">
-                        <span class="title"><h1> Welcome</h1></span>
+                 <!-- Start Grid Column -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+              <img class="img-about img-thumbnail" src="../layout/image/a.webp" alt="">
+              
+              </div>
+            </div>
+          </div>
+          <!-- End Grid Column -->
+          <!-- Start Grid Column -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+              <img class="img-about img-thumbnail" src="../layout/image/b.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- End Grid Column -->
+          <!-- Start Grid Column -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-body">
+              <img class="img-about img-thumbnail" src="../layout/image/c.webp" alt="">
+              
+              </div>
+            </div>
+          </div>
+     </div>
+        </div>
+    </div>
+       
+<!-- End Grid Column -->
+<!-- about -->
+<div class="about">
+<div class="container-fluid">
+     <div class="row">
+            <div class="col-sm-6 col-lg-12 col-md-12">
+                    <div class="card_info"> 
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body text-center">
+                                <h1> اهلآ وسهلآ </h1>
                                 <p>
                                     مدرسة تعليمية الالكترونية اون لاين تهدف لتطوير وتعليم الأطفال احدث وسائل التعليم العالمية وكيفية تعاملة مع التكنلوجيا الحديثة باحدث الوسائل وباستخدام العالمي وهو نظام STEAM نظام قائم على البحث والتفكير وحل المشكلات وربط التكنلوجيا الحديثة بالعلوم التطبيقية
                                     ليتمكن طفلك من التعامل مع التكنلوجيا الرقمية في المستقبل
@@ -52,61 +89,63 @@
 
                             </div>
 
-                            <button type="button" class="btn btn-primary">المزيد</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-md-3">
-                    <div class="card_img">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="../layout/image/4.png"> </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-md-3">
-                    <div class="card_img2">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="../layout/image/1.png" alt="">
-
-                                <div class="img2">
-                                    <img src="../layout/image/3.png" alt="">
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--about code for iraq start -->
-        <div class="code_info">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6  col-md-6 col-sm-6">
-                        <div class="logo">
-                            <img src="../layout/image/asset-5.png" alt="">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-md-6">
-                        <div class="card-about-code">
-                            <img src="../layout/image/11.png" alt="">
-                        </div>
-                        <div class="card">
-                            <h1>Code For Iraq</h1>
+</div>
+ <!--end about -->
+              
+            
+ <!--about code for iraq start -->
+      
+ <div class="code-info">
+        <div class="container">
+            <div class="row">
+                <div class="info col-lg-6">
+                    <img src="../layout/image/d.webp" alt="" />
+                </div>
+                <div class="info col-lg-6 text-center">
+                    <h2 class="h1">Code for Iraq</h2>
+                    <p> 
+                    وهي مبادرة إنسانية غير ربحية تهدف الى
+                    خدمة المجتمع عن طريق البرمجة
+                    تعتبر هذه المبادرة مبادرة تعليمية حقيقية 
+                    ترعى المهتمين بتعلم تصميم وبرمجة
+                    تطبيقات الهاتف الجوال ومواقع الانترنت
+                    وبرامج الحاسوب والشبكات والاتصالات
+                    ونظم تشغيل الحاسوب باستخدام التقنيات
+                    مفتوحة المصدر كما توفر لهم جميع 
+                    الدروس التعليمية الازمة وبشكل مجاني
+                    تماما بل الاهم من ذلك تعتمد على
+                    مبدأ المواطنة والمشاركة الفاعلة
+                    في تأسيس وبناء المجتمع تدعو هذه المبادرة 
+                    جميع الطلبة والخريجين والهواة
+                    والاساتذة الجامعيين والمهتمين مجال البرمجة 
+                    وتقنيات المعلومات وكذلك الاختصاصات الأخرى
+                    السب التطوع والمشاركة الفعلية لأجل الاتقاء بواقع البلد
+                    حيث تعتبر فرضة عظيمة اكتساب الخبرة والمهارة 
+                    عن طريق تصميم وتنفيذ برامج وتطبيقات خدمية
+                    من شأنها خدمة المواطن وذلك ضمن مجاميع
+                    عمل نشطة وفعالة يتعاون فيها جميع
+                    الافراد كفريق واحد تبادل الآراء والخبرات 
+                    ويطرح الافكار ليتم مناقشتها وتطبيقها على أرض الواقع
+                    كما تفتح المجال لجميع المواطنين العراقيين
+                    ومن جميع الاختصاصات الى المشاركة الفاعلة 
+                    في هذه المشاريع لرفد الفريق بالخبرات والأفكار 
+                    والآراء والمقترحات التي من شأنها 
+                    خدمة المجتمع بأفضل ما يمكن
 
-                            <div class="card-body">
-                                البرمجة من اجل العراق وهي مبادرة إنسانية غير هدف الى خدمه المجتمع عن طريق البرمجة وهي تعتبر مبادرة تعليمية حقيقية ترعى المهتمين بتعليم التصميم وبرمجة تطبيقات الهواتف الجوال ومواقع الانترنت وبرامج الحاسوب والشبكات باستخدام تقنيات open source مفتوحة المصدر
-                                كما توفر لهم جميع الدروس التعليمية اللازمة وبشكل مجاني تماما
-                            </div>
-                        </div>
-                    </div>
 
+                    </p>
+                   
                 </div>
             </div>
         </div>
     </div>
+    <!-- End Why Choose Us -->
+     
     <!-- end -->
 
     <!-- start about footer-->
@@ -116,14 +155,14 @@
                 <div class="col-lg-6 col-sm-6 col-md-6 float-lg-left">
                     <div class="card">
                         <div class="logo-img">
-                            <img src="../layout/image/5.png" alt="">
+                            <img src="../layout/image/e.webp" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-6 col-md-4 float-lg-right float-md-right">
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/halaa.png" alt="">
+                            <img src="../layout/image/g.webp" alt="">
                         </div>
                         <div class="tem-name">
                             حلا حازم
@@ -138,7 +177,7 @@
 
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/amaal2.jpg" alt="">
+                            <img src="../layout/image/amaal2.webp" alt="">
                         </div>
                         <div class="tem-name">
                             امال حسين
@@ -152,7 +191,7 @@
 
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/ahmed2.jpeg" alt="">
+                            <img src="../layout/image/f.webp" alt="">
                         </div>
                         <div class="tem-name">
                             احمد ياسين

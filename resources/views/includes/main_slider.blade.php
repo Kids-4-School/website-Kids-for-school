@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <img src="layout/image/cover.png" alt="">
+            <img src="layout/image/z.webp" alt="">
         </div>
 
     </div>

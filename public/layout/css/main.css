@@ -131,103 +131,53 @@ body {
 
 /*start card-info */
 
-.card_about .card_info {
-    margin-top: 5px;
-}
-
-.card_about .card_info .title {
-    font-weight: bold;
-    font-family: Cooper;
-}
-
-.card_about .card_info .card {
-    border: 0px;
-    box-shadow: 1px 1px 1px 1px #f5f5e3;
+.card_about .card {
+    border: none;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    margin: -7px;
     background-color: #ffffeb;
-    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
-.card_about .card_info .card .card-body {
-    text-align: end;
-    font-style: normal;
-    font-size: 19px;
-    font-family: Hacen Liner XXL;
-    padding-left: 23px;
-    line-height: 48px;
-}
-
-.card_about .card_info .card .btn-primary {
-    width: 101px;
-    background-color: #2C3E50 !important;
-    border-radius: 0px 20px 0px 20px;
-    color: #ffffff;
-}
-
-.card_about .card_img .card {
-    border: 0px;
-}
-
-.card_about .card_img .card .card-body img {
-    width: 343px;
-    height: 245px;
-    margin-top: 193px;
-    margin-left: 28px;
-}
-
-.card_about .card_img2 .card {
-    border: 0px;
-}
-
-.card_about .card_img2 .card .card-body img {
-    width: 500px;
-    margin-top: -21px;
-    height: 312px;
-    margin-left: 0px;
-}
-
-.card_about .card_img2 .card .card-body .img2 img {
-    width: 297px;
-    height: 320px;
-    margin-top: -16px;
-    margin-left: 146px;
-}
-
-.card_about .code_info .card-about-code img {
-    width: 619px;
-    margin-top: -70px;
-    height: 560px;
-    margin-left: -45px;
-}
-
-.card_about .code_info .card {
-    margin-top: -418px;
-    width: 405px;
-    padding-left: 18px;
-    padding-right: 18px;
-    text-align: end;
-    border: 0px;
-    margin-left: 120px;
+.about .card {
+    box-shadow: 1.5px 1.5px 2px 2px #ddd;
     background-color: #ffffeb;
-    margin-left: 60px;
+    border: none;
+    margin: 4% auto;
 }
 
-.card_about .code_info .card h1 {
-    text-align: center;
-    font-family: Cooper;
+.about .card h1 {
+    font-size: 50px;
+    text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.card_about .code_info .card .card-body {
-    font-size: 19px;
-    font-family: Hacen Liner XXL;
-    line-height: 26.4px;
-    float: right;
+.about .card p {
+    line-height: 3;
+    font-size: 28px;
+    width: 80%;
+    margin: 0 auto 15px;
+    color: #6a6a6a;
 }
 
-.card_about .code_info .logo img {
-    margin-top: 54px;
-    width: 519px;
-    margin-left: -47px;
+.code-info img {
+    max-width: 100%;
+}
+
+.code-info .info:last-child {
+    background-color: #fff;
+    color: #2C3E50;
+    box-shadow: 1px 1px 1px 1px #ddd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: none;
+}
+
+.code-info .info p {
+    line-height: 2;
+    width: 80%;
+    margin: 0 auto 15px;
 }
 
 
@@ -252,7 +202,7 @@ body {
 
 .footer-card .card .logo-img img {
     width: 100%;
-    margin-top: 145px;
+    margin-top: 163px;
     padding: 15px;
 }
 
@@ -418,6 +368,7 @@ body {
 .contact-inf h1 {
     font-weight: bold;
     font-family: Cooper;
+    margin: 20px;
 }
 
 .contact-inf .inf img {
