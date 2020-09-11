@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <img src="../layout/image/y.webp" alt="">
+                <img src="../layout/image/y.jpg" alt="">
             </div>
 
         </div>
@@ -41,7 +41,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="card">
               <div class="card-body">
-              <img class="img-about img-thumbnail" src="../layout/image/a.webp" alt="">
+              <img class="img-about img-thumbnail" src="../layout/image/a.jpg" alt="">
               
               </div>
             </div>
@@ -51,7 +51,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="card">
               <div class="card-body">
-              <img class="img-about img-thumbnail" src="../layout/image/b.webp" alt="">
+              <img class="img-about img-thumbnail" src="../layout/image/b.jpg" alt="">
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
           <div class="col-md-6 col-lg-4">
             <div class="card">
               <div class="card-body">
-              <img class="img-about img-thumbnail" src="../layout/image/c.webp" alt="">
+              <img class="img-about img-thumbnail" src="../layout/image/c.jpg" alt="">
               
               </div>
             </div>
@@ -104,7 +104,7 @@
         <div class="container">
             <div class="row">
                 <div class="info col-lg-6">
-                    <img src="../layout/image/d.webp" alt="" />
+                    <img src="../layout/image/d.jpg" alt="" />
                 </div>
                 <div class="info col-lg-6 text-center">
                     <h2 class="h1">Code for Iraq</h2>
@@ -155,14 +155,14 @@
                 <div class="col-lg-6 col-sm-6 col-md-6 float-lg-left">
                     <div class="card">
                         <div class="logo-img">
-                            <img src="../layout/image/e.webp" alt="">
+                            <img src="../layout/image/e.jpg" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-sm-6 col-md-4 float-lg-right float-md-right">
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/g.webp" alt="">
+                            <img src="../layout/image/g.jpg" alt="">
                         </div>
                         <div class="tem-name">
                             حلا حازم
@@ -177,7 +177,7 @@
 
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/amaal2.webp" alt="">
+                            <img src="../layout/image/amaal2.jpg" alt="">
                         </div>
                         <div class="tem-name">
                             امال حسين
@@ -191,7 +191,7 @@
 
                     <div class="info-card">
                         <div class="tem-img">
-                            <img src="../layout/image/f.webp" alt="">
+                            <img src="../layout/image/f.jpg" alt="">
                         </div>
                         <div class="tem-name">
                             احمد ياسين

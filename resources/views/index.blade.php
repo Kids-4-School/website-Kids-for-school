@@ -20,7 +20,7 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="layout/image/z3.webp">
+                            <img src="layout/image/z3.jpg">
 
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="layout/image/z1.webp">
+                            <img src="layout/image/z1.jpg">
 
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="card">
                         <div class="card-body">
-                            <img src="layout/image/z2.webp">
+                            <img src="layout/image/z2.jpg">
 
                         </div>
                     </div>

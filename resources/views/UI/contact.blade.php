@@ -40,7 +40,7 @@
                 </div>
 
 
-                <img src="../layout/image/i.webp" alt="">
+                <img src="../layout/image/i.jpeg" alt="">
             </div>
 
         </div>
@@ -73,8 +73,8 @@
                 </div>
                 <div class="col-lg-6 col-sm-6">
                     <div class="contac-img">
-                        <span class="back-img"><img src="../layout/image/o.webp" alt=""></span>
-                        <span class="img">  <img src="../layout/image/p.webp" alt=""></span>
+                        <span class="back-img"><img src="../layout/image/o.png" alt=""></span>
+                        <span class="img">  <img src="../layout/image/p.png" alt=""></span>
                     </div>
                 </div>
             </div>
