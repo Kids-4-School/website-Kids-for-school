@@ -248,7 +248,7 @@ INSERT INTO `services` (`id`, `title`, `image`, `description`, `user_id`, `creat
 (15, 'New Kareem Service', 'gg9pqUIxJRzlVy44AUhscJVXL0Kvxrs6o1D0suj5.jpeg', 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 10, '2020-05-08 23:03:06', '2020-05-08 23:03:06');
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$wiVMyOSAUtdI6rxFvHxUY.t9VVhlxj7INn9PKsNjSebfaQnUgmA/G', NULL, NULL, '2020-04-13 11:06:41', '2020-04-13 11:06:41');
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$tH6hlLaH5NW0sWRq43d0yeNhJ78PFNsWXWoc76iejIrrfO90Eccfm', NULL, NULL, '2020-04-13 11:06:41', '2020-04-13 11:06:41');
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'editor', 'editor@gmail.com', NULL, '$2y$10$4PsttR8zq9p6.gYvXnoxNOs8YkpEfB1t1DtxhfhDkO6VY3DGQh.hy', NULL, NULL, '2020-04-13 11:06:42', '2020-04-13 11:06:42');
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `profile_id`, `remember_token`, `created_at`, `updated_at`) VALUES
